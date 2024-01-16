@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.akash-logo {
+    height: 50px;
+    width: 150px;
+    border-radius: 20px;
+}
+#logo_r{
+    height: 60px;
+    margin-left: 80px;
+}
+
+.recharge{
+    height: 380px;
+    background: #32c5ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.recharge>h1{
+    margin-left: 5rem;
+    color : white;
+    margin-bottom: 30px;
+}
+.card-holder{
+    display: flex;
+    justify-content:space-evenly;
+}
+.cards1{
+    width: 150px;
+    height: 180px;
+    padding-left: 15px;
+    padding-top: 10px;
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+}
+.cards1:hover{
+    background: #1c9dd0;
+}
+.rech{
+    color : white;
+    font-weight: 600;
+    letter-spacing: .1rem;
+}
+.card{
+    background: #32c5ff;
+    border: none;
+}
+.img-div{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.img-div>img{
+    width: 60px;
+}
+.arrow{
+    width: 7px;
+    margin-left: 5px;
+}
+.Tickets{
+    background-color: #4111ed;
+}
+.cards2:hover{
+    background: #3609d6;
+}
