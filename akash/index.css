@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, hsla(253, 87%, 50%, 1) 9%, hsla(197, 100%, 60%, 1) 82%);
+}
+
+.akash-logo {
+    height: 50px;
+    width: 150px;
+    border-radius: 20px;
+}
+
+.next_section {
+    height: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.word>p>span {
+    color: rgb(7, 1, 128);
+}
+
+.word .digital {
+    color: antiquewhite;
+}
+
+.word>p {
+    color: black;
+    font-weight: 600;
+    font-size: 55px;
+}
+
+.merchant {
+    color: antiquewhite;
+    font-size: 16px;
+    flex-shrink: 1;
+    font-weight: 500;
+    display: flex;
+}
+
+.image img {
+    border-radius: 15px;
+}
+
+.third_section {
+    height: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.third_section>p {
+    text-align: center;
+    font-weight: 700;
+    font-size: 45px;
+    color: antiquewhite;
+}
+
+.grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 75px;
+}
