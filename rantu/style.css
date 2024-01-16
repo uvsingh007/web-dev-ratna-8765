@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.akash-logo {
+    height: 50px;
+    width: 150px;
+    border-radius: 20px;
+}
+.akash-logo:hover{
+    cursor: pointer;
+}
+#logo_r{
+    height: 60px;
+    margin-left: 80px;
+}
+#notificationButton{
+    box-sizing: border-box;
+    margin-left: 5px;
+}
+.hero-options_r{
+    width: 100%;
+    height: 60vh;
+    background-color: #dfdff3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.options_r{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.box_r{
+    width: 300px;
+    height: 300px;
+    /* border: 1px solid; */
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .6s;
+}
+.box_r:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.box_r>img{
+    width: 200px;
+    border-radius: 50%;
+}
+.anchor1_r{
+    width: 110px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: larger;
+    font-weight: 600;
+}
+.anchor1_r>a{
+    text-decoration: none;
+}
+.a_money{
+    border: 1px solid #0071bc;
+    background-color: #0080bc10;
+}
+.a_bank>a{
+    color : rgb(85, 214, 59);
+}
+.a_bank{
+    border: 1px solid rgb(85, 214, 59);
+    background-color: rgba(85, 214, 59, 0.14);
+}
+.a_more>a{
+    color : orange;
+}
+.a_more{
+    border: 1px solid orange;
+    background-color: rgba(255, 166, 0, 0.155);
+}
+.a_passbook{
+    border: 1px solid #0071bc;
+    background-color: #0071bc0f;
+}
+#plus{
+    transform: scale(10);
+    color : orange;
+}
+.recharge{
+    height: 380px;
+    background: #32c5ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.recharge>h1{
+    margin-left: 5rem;
+    color : white;
+    margin-bottom: 30px;
+}
+.card-holder{
+    display: flex;
+    justify-content:space-evenly;
+}
+.cards1{
+    width: 150px;
+    height: 180px;
+    padding-left: 15px;
+    padding-top: 10px;
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+}
+.cards1:hover{
+    background: #1c9dd0;
+}
+.rech{
+    color : white;
+    font-weight: 600;
+    letter-spacing: .1rem;
+}
+.card{
+    background: #32c5ff;
+    border: none;
+}
+.img-div{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.img-div>img{
+    width: 60px;
+}
+.arrow{
+    width: 7px;
+    margin-left: 5px;
+}
+.Tickets{
+    background-color: #4111ed;
+}
+.cards2:hover{
+    background: #3609d6;
+}
