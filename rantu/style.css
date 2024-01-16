@@ -8,11 +8,91 @@
     width: 150px;
     border-radius: 20px;
 }
+.akash-logo:hover{
+    cursor: pointer;
+}
 #logo_r{
     height: 60px;
     margin-left: 80px;
 }
-
+#notificationButton{
+    box-sizing: border-box;
+    margin-left: 5px;
+}
+.hero-options_r{
+    width: 100%;
+    height: 60vh;
+    background-color: #dfdff3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.options_r{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.box_r{
+    width: 300px;
+    height: 300px;
+    /* border: 1px solid; */
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .6s;
+}
+.box_r:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.box_r>img{
+    width: 200px;
+    border-radius: 50%;
+}
+.anchor1_r{
+    width: 110px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: larger;
+    font-weight: 600;
+}
+.anchor1_r>a{
+    text-decoration: none;
+}
+.a_money{
+    border: 1px solid #0071bc;
+    background-color: #0080bc10;
+}
+.a_bank>a{
+    color : rgb(85, 214, 59);
+}
+.a_bank{
+    border: 1px solid rgb(85, 214, 59);
+    background-color: rgba(85, 214, 59, 0.14);
+}
+.a_more>a{
+    color : orange;
+}
+.a_more{
+    border: 1px solid orange;
+    background-color: rgba(255, 166, 0, 0.155);
+}
+.a_passbook{
+    border: 1px solid #0071bc;
+    background-color: #0071bc0f;
+}
+#plus{
+    transform: scale(10);
+    color : orange;
+}
 .recharge{
     height: 380px;
     background: #32c5ff;
