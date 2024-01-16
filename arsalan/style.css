@@ -198,3 +198,19 @@ img{
 .container.active .toggle-right{
     transform: translateX(200%);
 }
+
+@media(max-width: 767px){
+ .container{
+      height: 600px;
+ }
+   .hidden{
+    width: 150px;
+   }
+   .form-container button{
+    width: 150px;
+   }
+   .form-container input{
+    width: 150px;
+   }
+   
+}
