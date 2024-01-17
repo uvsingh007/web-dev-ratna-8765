@@ -8,6 +8,9 @@ body {
     font-family: "Poppins", sans-serif;
     background: linear-gradient(135deg, hsla(253, 87%, 50%, 1) 9%, hsla(197, 100%, 60%, 1) 82%);
 }
+a{
+    text-decoration: none;
+}
 
 .akash-logo {
     height: 50px;
