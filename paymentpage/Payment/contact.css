@@ -1,0 +1,48 @@
+body{
+    background: linear-gradient(135deg, hsla(253, 87%, 50%, 1) 9%, hsla(197, 100%,60%,1)82%);
+    height: 100vh;
+}
+
+#container{
+    display: flex;
+    align-items: center;
+   color: white;
+}
+
+#container button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right:10px ;
+    ;
+
+
+}
+.fa-arrow-left{
+    font-size: 25px;
+    color: white;
+   
+}
+
+#search{
+    margin-left: 10px;
+    font-size: 15px;
+    width: 500px;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+#contactdiv{
+
+ border-radius: 10px 10px 0px 0px;
+ width: 70%;
+ margin: auto;
+ padding: 20px;
+ background-color: white;
+ margin-top: 20px;
+ height: auto;
+}
+
+ 
