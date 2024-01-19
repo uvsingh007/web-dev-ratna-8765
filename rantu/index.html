@@ -54,7 +54,7 @@
                         </li>
                     </ul>
                     <form style="display: flex;">
-                        <button class="btn btn-outline-primary d-flex" type="submit">Profile
+                        <button class="btn btn-outline-primary d-flex" type="submit"><a style="text-decoration: none;" href="./profile/profile.html">Profile</a>
                             <i style="margin: 3px 0 0 5px" class="fa-solid fa-user"></i>
                         </button>
                         <button id="notificationButton" class="btn btn-outline-primary d-flex" type="submit">
@@ -67,6 +67,33 @@
         </nav>
     </div>
     <!-- body -->
+
+   
+
+    <!-- Top Bar -->
+   <div class="head">
+        <div class="totalBalance">
+            <div class="profile">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <p id="welcome">Hello User!<br> Welcome to <span style="color:#0071bc; font-weight: bold;">Digital Pay.</span></p>
+
+            <div class="send-button">
+                <i class="fa-solid fa-paper-plane"></i>
+                <a href="#">Send</a>
+            </div>
+            
+            <div class="total-balance">
+                <p class="total-balance-text">Total Balance</p>
+                <h2 class="total-balance-amount">$ 500.00</h2>
+            </div>
+        </div>
+   </div>
+
+
+    <!-- Options -->
+
     <div class="main_part">
         <div class="hero-options_r">
             <div class="options_r">
@@ -98,7 +125,9 @@
                     <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Profile">
                 </div>
                 <div class="a_more anchor1_r">
-                    <a href="#">Profile</a>
+
+                    <a href="./profile/profile.html">Profile</a>
+
                 </div>
             </div>  
             <div class="options_r">
@@ -124,6 +153,117 @@
                 <div class="a_more anchor1_r">
                     <a href="#">Consumers</a>
                 </div>
+
+            </div>
+            <div class="options_r">
+                <div style="background-color: rgba(0, 170, 255, 0.503);" class="box_r">
+                    <i  class="fa-solid fa-plus plus"></i>
+                </div>
+                <div class="a_more anchor1_r">
+                    <a href="#">More</a>
+                </div>
+            </div>
+        </div>
+        <div class="details_r">
+            <h3 style="margin-bottom: 20px; font-weight: 600; color: #0071bc">Transactions</h3>
+            <div class="singlecustomer">
+                <div class="image_r">
+                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Customer">
+                </div>
+                <div class="customerDetails">
+                    <div class="name_status common">
+                        <h5 class="h5">John Doe</h5>
+                        <p>Credited</p>
+                    </div>
+                    <div class="amount common">
+                        <h5 class="dollar">+$210.00</h5>
+                        <p>15 Jan 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="singlecustomer">
+                <div class="image_r">
+                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Customer">
+                </div>
+                <div class="customerDetails">
+                    <div class="name_status common">
+                        <h5 class="h5">Ammela Neison</h5>
+                        <p>Transfered</p>
+                    </div>
+                    <div class="amount common">
+                        <h5 class="dollar">+$310.00</h5>
+                        <p>12 Jan 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="singlecustomer">
+                <div class="image_r">
+                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Customer">
+                </div>
+                <div class="customerDetails">
+                    <div class="name_status common">
+                        <h5 class="h5">Martin Anderson</h5>
+                        <p>Add to Wallet</p>
+                    </div>
+                    <div class="amount common">
+                        <h5 class="dollar">+$200.00</h5>
+                        <p>09 Jan 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="singlecustomer">
+                <div class="image_r">
+                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Customer">
+                </div>
+                <div class="customerDetails">
+                    <div class="name_status common">
+                        <h5 class="h5">Conor Crowley</h5>
+                        <p>Sent</p>
+                    </div>
+                    <div class="amount common">
+                        <h5 class="dollar" style="color: red">-$210.00</h5>
+                        <p>01 Jan 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="singlecustomer">
+                <div class="image_r">
+                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Customer">
+                </div>
+                <div class="customerDetails">
+                    <div class="name_status common">
+                        <h5 class="h5">Stephen Smith</h5>
+                        <p>Debited</p>
+                    </div>
+                    <div class="amount common">
+                        <h5 class="dollar" style="color: red">-$250.00</h5>
+                        <p>15 Nov 2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="singlecustomer">
+                <div class="image_r">
+                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Customer">
+                </div>
+                <div class="customerDetails">
+                    <div class="name_status common">
+                        <h5 class="h5">Devid Smith</h5>
+                        <p>Credited</p>
+                    </div>
+                    <div class="amount common">
+                        <h5 class="dollar">+$200.00</h5>
+                        <p>15 Sept 2023</p>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
             </div>
             <div class="options_r">
                 <div style="background-color: rgba(0, 170, 255, 0.503);" class="box_r">
@@ -153,6 +293,7 @@
             </div>
         
          </div>
+
     </div>
     
      
@@ -274,6 +415,77 @@
         </div>
     </div>
 
+    <!-- footer part -->
+    <footer>
+        <div class="foot_one">
+            <div class="about">
+                <img class="akash-logo" src="/web-dev-ratna-8765/assets/Screenshot 2024-01-16 135039.png" alt="">
+                <h6>Digital Pay, envisioned and initiated in the year 2024 by four innovative minds from Masai School, is not just an app – it's a comprehensive FinTech platform designed to revolutionize the landscape for offline merchants and small businesses.
+                    Our mission is clear: to provide a holistic solution that simplifies financial transactions and empowers local businesses.</h6>
+            </div>
+            <div class="contact">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                General
+                            </th>
+                            <th>
+                                Resources
+                            </th>
+                            <th>Legal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>About Us</td>
+                            <td>Build With Digital Pay</td>
+                            <td>Terms & Conditions</td>
+                        </tr>
+                        <tr>
+                            <td>Careers</td>
+                            <td>Transforming Bharat</td>
+                            <td>Privacy Policy</td>
+                        </tr>
+                        <tr>
+                            <td>Press</td>
+                            <td>Merchant Stories</td>
+                            <td>Grievance Redressal Policy</td>
+                        </tr>
+                        <tr>
+                            <td>Contact Us</td>
+                            <td>success Stories</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr style="color: white;">
+
+        <div class="getUs">
+            <div>
+                <h5>GET OUR APP TODAY</h5>
+            </div>
+            <div class="google_play">
+
+                <img src="https://bp-wp-website-prod.s3.ap-south-1.amazonaws.com/wp-content/uploads/2023/09/play-st.png" alt="">
+                <img src="https://bp-wp-website-prod.s3.ap-south-1.amazonaws.com/wp-content/uploads/2023/09/app-st.png" alt="">
+            </div>
+        </div>
+        <hr style="color: white;">
+        <div class="credit">
+            <div class="credit_tag">
+                <p>© 2024 All Rights Reserved</p>
+            </div>
+            <div class="box">
+                <i class="fa-brands fa-facebook " style="color: #b5b5b5;"></i>
+                <i class="fa-brands fa-telegram" style="color: #b5b5b5;"></i>
+                <i class="fa-brands fa-youtube" style="color: #b5b5b5;"></i>
+                <i class="fa-brands fa-twitter" style="color: #b5b5b5;"></i>
+                <i class="fa-brands fa-instagram" style="color: #b5b5b5;"></i>
+            </div>
+        </div>
+    </footer>
     
 
 
