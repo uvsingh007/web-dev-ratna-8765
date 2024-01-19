@@ -1,14 +1,36 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=DM+Serif+Display&family=Poppins&display=swap');
 *{
-   margin: 0;
-   padding: 0; 
-   
+    margin: 0;
+    padding: 0; 
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Poppins', sans-serif;
 }
+
 .body{
     background: linear-gradient(135deg, hsla(253, 87%, 50%, 1) 9%, hsla(197, 100%, 60%, 1) 82%);
     /* height: 100vh; */
     color: white;
     padding-top: 100px;
 }
+
+.bank-body{
+    padding:0px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bank-body>button{
+    padding: 10px 20px;
+    border: 1px solid white;
+    color: white;
+    border-radius: 10px;
+    background-color: #4011ec;
+    font-weight: 800;
+    cursor: pointer;
+}
+
 .wrapper{
     background-color: white;
     display: flex;
@@ -19,20 +41,41 @@
     margin-top: 50px;
     border-radius: 30px 30px 0px 0px;
 }
+
 .bank-card{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border-radius: 10px;
     height: 100px;
     width: 150px;
     transition: all 0.5s ease-in-out;
+    cursor: pointer;
 }
+
 .bank-card:hover{
     scale: 1.05;
 }
+
 .bank-logo{
     height: 100%;
     width: 100%;
     border-radius: 10px;
     /* object-fit: cover;  */
     /* for small device use h-100px w-150px */
+}
+
+.selected{
+    border:5px solid green;
+    scale:1.05;
+}
+
+.tick{
+    position: absolute;
+    top:0;
+    right: 0;
+    height: 50px;
+}
+
+.tick>svg{
+   height: 100%;
+   width: 100%;
 }
