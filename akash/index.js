@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     function animateDivs() {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
         document.querySelector('.image').classList.add('active');
         document.querySelector('.image2').classList.add('active');
         document.querySelector('.word').classList.add('active');
@@ -16,7 +16,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function handleScroll() {
     let scrollPosition = window.scrollY;
-    let threshold = 200;
+    let threshold;
+
+
+    if (window.innerWidth <= 720) {
+        threshold = -110;
+    } else {
+        threshold = 200;
+    }
+
     if (scrollPosition > threshold) {
         animateElements();
         window.removeEventListener("scroll", handleScroll);
