@@ -11,10 +11,10 @@
     <div class="body">
         <div class="bank-body">
             <h1>SELECT BANK </h1>
-            <button>Proceed</button>
+            <button id="proceed-button" class="proceedbtn disabled">Proceed</button>
         </div>
         <div class="wrapper">
-            <div class="bank-card selected">
+            <!-- <div class="bank-card selected">
                 <img class="bank-logo" src="../assets/banks/axis.png">
                 <div class="tick"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
                     <path fill="#c8e6c9" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"></path><path fill="#4caf50" d="M34.586,14.586l-13.57,13.586l-5.602-5.586l-2.828,2.828l8.434,8.414l16.395-16.414L34.586,14.586z"></path>
@@ -47,6 +47,27 @@
             <div class="bank-card">
                 <img class="bank-logo" src="../assets/banks/canara.png">
             </div>
+        </div> -->
+    </div>
+    <div id="detail-wrapper" class="details-wrapper hidden">
+        <div class="details">
+            <div class="details-cont">
+                <h1>Enter Bank Details</h1>
+                <svg id="close-button" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 30 30">
+                    <path d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"></path>
+                </svg>
+            </div>
+            <form>
+                <div id="account-number-error" class="error">Error!</div>
+                <input id="accountNumber" placeholder="Enter account number" type="number"/>
+                <div id="confirm-account-number-error" class="error"></div>
+                <input id="confirmAccountNumber" type= "number"  placeholder="Re-Enter account number"/>
+                <div id="ifsc-error" class="error"></div>
+                <input id="ifsc"  placeholder="IFSC code" type="text"/>
+                <div id="branch-error" class="error"></div>
+                <input id="branch" type= "text"  placeholder="Branch"/><br><br>
+                <a href=".././rantu/index.html" target="_blank"><button id="submit-form-button" type="submit">Submit </button></a>
+            </form>
         </div>
     </div>
     <script src="./script.js"></script>
