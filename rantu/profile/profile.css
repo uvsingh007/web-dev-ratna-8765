@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, hsla(253, 87%, 50%, 1) 9%, hsla(197, 100%, 60%, 1) 82%);
+}
+.img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.img>img{
+    width: 100px;
+    border-radius: 50%;
+}
+.profile_r{
+    width: 70%;
+    height: 600px;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+.user-details{
+    width: 80%;
+    height: 130px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 25px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+}
+.docs>h2{
+    color: #0071bc;
+    margin-left: -2px;
+}
+.allDetails{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 80%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 20px 70px 20px 70px;
+}
+.pay{
+    color: #0071bc;
+    font-size: large;
+    font-weight: 600;
+}
+.card{
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+}
+.addPayMethods{
+    width: 250px;
+    height: 40px;
+    border: 1px solid #0071bc;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition-duration: .5s ease-in-out;
+}
+.addPayMethods>p{
+    color: #0071bc;
+    font-weight: 600;
+}
+#other{
+    margin: 10px 0;
+}
+.others{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.gap{
+    margin-right: 10px;
+}
+.user-details:hover, .allDetails:hover {
+    cursor: pointer;
+}
+.addPayMethods:hover{
+    cursor: pointer;
+    background-color: #0884d725;
+}
+
+@media only screen and (max-width: 600px) {
+    .profile_r, .user-details, .allDetails, .card, .addPayMethods {
+        width: 90%;
+        max-width: 100%;
+    }
+    .profile_r{
+        height: auto;
+        flex-direction: column;
+    }
+    .user-details{
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .allDetails{
+        height: auto;
+        padding: 10px;
+    }
+    .addPayMethods{
+        width: 100%;
+    }
+}

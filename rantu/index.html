@@ -18,7 +18,7 @@
     <div class="position-s sticky-top">
         <nav class="navbar navbar-expand-lg bg-body-tertiary ">
             <div class="container-fluid mx-5">
-                <img class="akash-logo" src="/web-dev-ratna-8765/assets/Screenshot 2024-01-16 135039.png" alt="">
+                <img class="akash-logo" src="../assets/Screenshot 2024-01-16 135039.png" alt="">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -54,7 +54,7 @@
                         </li>
                     </ul>
                     <form style="display: flex;">
-                        <button class="btn btn-outline-primary d-flex" type="submit">Profile
+                        <button class="btn btn-outline-primary d-flex" type="submit"><a style="text-decoration: none;" href="./profile/profile.html">Profile</a>
                             <i style="margin: 3px 0 0 5px" class="fa-solid fa-user"></i>
                         </button>
                         <button id="notificationButton" class="btn btn-outline-primary d-flex" type="submit">
@@ -67,40 +67,209 @@
         </nav>
     </div>
     <!-- body -->
-     <div class="hero-options_r">
-        <div class="options_r">
-            <div style="background-color: rgba(0, 170, 255, 0.503);" class="box_r">
-                <img src="https://media.istockphoto.com/id/646887790/vector/hand-with-money.jpg?s=612x612&w=0&k=20&c=s5jBNP4aoZlxP8dy1-SREQaYlzy4PFX7PmJtxSSDve8=" alt="money">
+
+   
+
+    <!-- Top Bar -->
+   <div class="head">
+        <div class="totalBalance">
+            <div class="profile">
+                <i class="fa-solid fa-user"></i>
             </div>
-            <div class="a_money anchor1_r">
+
+            <p id="welcome">Hello User!<br> Welcome to <span style="color:#0071bc; font-weight: bold;">Digital Pay.</span></p>
+
+            <div class="send-button">
+                <i class="fa-solid fa-paper-plane"></i>
                 <a href="#">Send</a>
             </div>
-        </div>
-        <div class="options_r">
-            <div style="background-color: rgba(94, 250, 70, 0.66)" class="box_r">
-                <img src="https://png.pngtree.com/png-vector/20220809/ourlarge/pngtree-bank-icon-from-commerce-buttons-overcolor-set-museum-square-home-vector-png-image_19432014.jpg" alt="bank">
-            </div>
-            <div class="a_bank anchor1_r">
-                <a href="#">Transfer</a>
+            
+            <div class="total-balance">
+                <p class="total-balance-text">Total Balance</p>
+                <h2 class="total-balance-amount">$ 500.00</h2>
             </div>
         </div>
-        <div class="options_r">
-            <div style="background-color: rgba(0, 170, 255, 0.503);" class="box_r">
-                <img src="https://cdn-icons-png.flaticon.com/512/10149/10149443.png" alt="passbook">
+   </div>
+
+
+    <!-- Options -->
+
+    <div class="main_part">
+        <div class="hero-options_r">
+            <div class="options_r">
+                <div style="background-color: rgba(0, 170, 255, 0.503);" class="box_r">
+                    <img src="https://media.istockphoto.com/id/646887790/vector/hand-with-money.jpg?s=612x612&w=0&k=20&c=s5jBNP4aoZlxP8dy1-SREQaYlzy4PFX7PmJtxSSDve8=" alt="money">
+                </div>
+                <div class="a_money anchor1_r">
+                    <a href="#">Send</a>
+                </div>
             </div>
-            <div class="a_passbook anchor1_r">
-                <a href="#">Passbook</a>
+            <div class="options_r">
+                <div style="background-color: rgba(0, 170, 255, 0.503)" class="box_r">
+                    <img src="https://media.istockphoto.com/id/1216964305/vector/bank-icon-building-house-vector-blue-color.jpg?s=612x612&w=0&k=20&c=r_wBAcKLqaYcN2HurMM-WGMZDHuhFnA_oZH_hXlVt2A=" alt="bank">
+                </div>
+                <div class="a_bank anchor1_r">
+                    <a href="#">Transfer</a>
+                </div>
+            </div>
+            <div class="options_r">
+                <div style="background-color: rgba(0, 170, 255, 0.503);" class="box_r">
+                    <img src="https://cdn-icons-png.flaticon.com/512/10149/10149443.png" alt="passbook">
+                </div>
+                <div class="a_passbook anchor1_r">
+                    <a href="#">Passbook</a>
+                </div>
+            </div>
+            <div class="options_r">
+                <div style="background-color: rgba(0, 170, 255, 0.503);" class="box_r">
+                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Profile">
+                </div>
+                <div class="a_more anchor1_r">
+
+                    <a href="./profile/profile.html">Profile</a>
+
+                </div>
+            </div>  
+            <div class="options_r">
+                <div style="background-color: rgba(0, 170, 255, 0.503);" class="box_r">
+                    <img src="https://thumbs.dreamstime.com/b/cash-finance-money-icon-blue-color-design-isolated-white-background-use-graphic-web-commercial-purposes-vector-223421224.jpg" alt="Balance">
+                </div>
+                <div class="a_more anchor1_r">
+                    <a href="#">Balance</a>
+                </div>
+            </div> 
+            <div class="options_r">
+                <div style="background-color: rgba(0, 170, 255, 0.503);" class="box_r">
+                    <img src="https://t3.ftcdn.net/jpg/03/18/54/12/360_F_318541265_iMXeXxlsrrMpPpsuHuzW1DojKzN1hJQG.jpg" alt="Investors">
+                </div>
+                <div class="a_more anchor1_r">
+                    <a href="#">Investors</a>
+                </div>
+            </div> 
+            <div class="options_r">
+                <div style="background-color: rgba(0, 170, 255, 0.503);" class="box_r">
+                    <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/consumer-discuss-1618748-1372434.png?f=webp" alt="Consumers">
+                </div>
+                <div class="a_more anchor1_r">
+                    <a href="#">Consumers</a>
+                </div>
+
+            </div>
+            <div class="options_r">
+                <div style="background-color: rgba(0, 170, 255, 0.503);" class="box_r">
+                    <i  class="fa-solid fa-plus plus"></i>
+                </div>
+                <div class="a_more anchor1_r">
+                    <a href="#">More</a>
+                </div>
             </div>
         </div>
-        <div class="options_r">
-            <div style="background-color: rgba(255, 213, 0, 0.552);" class="box_r">
-                <i id="plus" class="fa-solid fa-plus"></i>
+        <div class="details_r">
+            <h3 style="margin-bottom: 20px; font-weight: 600; color: #0071bc">Transactions</h3>
+            <div class="singlecustomer">
+                <div class="image_r">
+                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Customer">
+                </div>
+                <div class="customerDetails">
+                    <div class="name_status common">
+                        <h5 class="h5">John Doe</h5>
+                        <p>Credited</p>
+                    </div>
+                    <div class="amount common">
+                        <h5 class="dollar">+$210.00</h5>
+                        <p>15 Jan 2024</p>
+                    </div>
+                </div>
             </div>
-            <div class="a_more anchor1_r">
-                <a href="#">More</a>
+
+            <div class="singlecustomer">
+                <div class="image_r">
+                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Customer">
+                </div>
+                <div class="customerDetails">
+                    <div class="name_status common">
+                        <h5 class="h5">Ammela Neison</h5>
+                        <p>Transfered</p>
+                    </div>
+                    <div class="amount common">
+                        <h5 class="dollar">+$310.00</h5>
+                        <p>12 Jan 2024</p>
+                    </div>
+                </div>
             </div>
-        </div>  
-     </div>
+
+            <div class="singlecustomer">
+                <div class="image_r">
+                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Customer">
+                </div>
+                <div class="customerDetails">
+                    <div class="name_status common">
+                        <h5 class="h5">Martin Anderson</h5>
+                        <p>Add to Wallet</p>
+                    </div>
+                    <div class="amount common">
+                        <h5 class="dollar">+$200.00</h5>
+                        <p>09 Jan 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="singlecustomer">
+                <div class="image_r">
+                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Customer">
+                </div>
+                <div class="customerDetails">
+                    <div class="name_status common">
+                        <h5 class="h5">Conor Crowley</h5>
+                        <p>Sent</p>
+                    </div>
+                    <div class="amount common">
+                        <h5 class="dollar" style="color: red">-$210.00</h5>
+                        <p>01 Jan 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="singlecustomer">
+                <div class="image_r">
+                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Customer">
+                </div>
+                <div class="customerDetails">
+                    <div class="name_status common">
+                        <h5 class="h5">Stephen Smith</h5>
+                        <p>Debited</p>
+                    </div>
+                    <div class="amount common">
+                        <h5 class="dollar" style="color: red">-$250.00</h5>
+                        <p>15 Nov 2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="singlecustomer">
+                <div class="image_r">
+                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Customer">
+                </div>
+                <div class="customerDetails">
+                    <div class="name_status common">
+                        <h5 class="h5">Devid Smith</h5>
+                        <p>Credited</p>
+                    </div>
+                    <div class="amount common">
+                        <h5 class="dollar">+$200.00</h5>
+                        <p>15 Sept 2023</p>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        
+         </div>
+
+    </div>
+    
+     
+    <!-- Two Add Sections -->
 
     <div class="recharge">
         <h1>Recharge & Pay Bills on Digital Pay.</h1>
@@ -218,8 +387,80 @@
         </div>
     </div>
 
+    <!-- footer part -->
+    <footer>
+        <div class="foot_one">
+            <div class="about">
+                <img class="akash-logo" src="/web-dev-ratna-8765/assets/Screenshot 2024-01-16 135039.png" alt="">
+                <h6>Digital Pay, envisioned and initiated in the year 2024 by four innovative minds from Masai School, is not just an app – it's a comprehensive FinTech platform designed to revolutionize the landscape for offline merchants and small businesses.
+                    Our mission is clear: to provide a holistic solution that simplifies financial transactions and empowers local businesses.</h6>
+            </div>
+            <div class="contact">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                General
+                            </th>
+                            <th>
+                                Resources
+                            </th>
+                            <th>Legal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>About Us</td>
+                            <td>Build With Digital Pay</td>
+                            <td>Terms & Conditions</td>
+                        </tr>
+                        <tr>
+                            <td>Careers</td>
+                            <td>Transforming Bharat</td>
+                            <td>Privacy Policy</td>
+                        </tr>
+                        <tr>
+                            <td>Press</td>
+                            <td>Merchant Stories</td>
+                            <td>Grievance Redressal Policy</td>
+                        </tr>
+                        <tr>
+                            <td>Contact Us</td>
+                            <td>success Stories</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr style="color: white;">
+
+        <div class="getUs">
+            <div>
+                <h5>GET OUR APP TODAY</h5>
+            </div>
+            <div class="google_play">
+
+                <img src="https://bp-wp-website-prod.s3.ap-south-1.amazonaws.com/wp-content/uploads/2023/09/play-st.png" alt="">
+                <img src="https://bp-wp-website-prod.s3.ap-south-1.amazonaws.com/wp-content/uploads/2023/09/app-st.png" alt="">
+            </div>
+        </div>
+        <hr style="color: white;">
+        <div class="credit">
+            <div class="credit_tag">
+                <p>© 2024 All Rights Reserved</p>
+            </div>
+            <div class="box">
+                <i class="fa-brands fa-facebook " style="color: #b5b5b5;"></i>
+                <i class="fa-brands fa-telegram" style="color: #b5b5b5;"></i>
+                <i class="fa-brands fa-youtube" style="color: #b5b5b5;"></i>
+                <i class="fa-brands fa-twitter" style="color: #b5b5b5;"></i>
+                <i class="fa-brands fa-instagram" style="color: #b5b5b5;"></i>
+            </div>
+        </div>
+    </footer>
     
 
+    <!-- Just Checking -->
 
 
 
