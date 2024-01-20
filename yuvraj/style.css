@@ -13,15 +13,17 @@
     /* height: 100vh; */
     color: white;
     padding-top: 100px;
+    position: relative;
 }
 
 .bank-body{
     padding:0px 50px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.bank-body>button{
+.proceedbtn{
     padding: 10px 20px;
     border: 1px solid white;
     color: white;
@@ -29,6 +31,7 @@
     background-color: #4011ec;
     font-weight: 800;
     cursor: pointer;
+    margin-left: 5%;
 }
 
 .wrapper{
@@ -37,17 +40,17 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 50px 0px;
+    padding: 50px 20px;
     margin-top: 50px;
     border-radius: 30px 30px 0px 0px;
 }
 
 .bank-card{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    border-radius: 10px;
-    height: 100px;
-    width: 150px;
-    transition: all 0.5s ease-in-out;
+    border-radius: 15px;
+    height: 200px;
+    width: 300px;
+    transition: all 0.2s ease-in-out;
     cursor: pointer;
 }
 
@@ -78,4 +81,108 @@
 .tick>svg{
    height: 100%;
    width: 100%;
+}
+
+.disabled{
+    cursor:not-allowed;
+    background-color:grey
+}
+
+.hidden{
+    display: none;
+}
+
+.details-wrapper{
+    position: absolute;
+    color: black;
+    top:0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+}
+
+.details{
+    text-align: center;
+    width: 80%;
+    background-color: white;
+    margin-top: 10%;
+    padding: 30px 0px;
+    margin-left: 10%;
+    border-radius: 30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    position: relative;
+}
+
+.details form{
+    margin-top: 30px;
+}
+
+.details input{
+    width:80%;
+    font-size: 30px;
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.details button{
+    padding: 10px 20px;
+    border: 1px solid white;
+    color: white;
+    border-radius: 10px;
+    background-color: #4011ec;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.details-cont>svg{
+    position: absolute;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    top:5%;
+    right:5%;
+}
+
+@media(max-width:1025px){
+    .bank-card{
+        height: 150px;
+        width: 260px;
+    }
+}
+
+@media(max-width:769px){
+    .details h1{
+        font-size: 25px;
+    }
+    .details input{
+        font-size: 13px;
+    }
+    .details-cont>svg{
+        top:3%;
+        height: 20px;
+        width: 20px;
+    }
+    .bank-card{
+        height: 100px;
+        width: 150px;
+    }
+}
+
+@media(max-width:481px){
+    .bank-card{
+        height: 100px;
+        width: 150px;
+    }
+    .bank-body>h1{
+        font-size: 20px;
+    }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
