@@ -250,9 +250,10 @@
         color: #cecece;
     }
     
-    @media (max-width: 760px) {
+    @media (max-width: 720px) {
         .container {
-            /* max-width: 540px; */
+            width: 0;
+            padding: 0;
             grid-template-columns: repeat(2, 1fr);
         }
         .image {
@@ -296,6 +297,10 @@
         .image2 {
             display: none;
         }
+        .merchant {
+            width: 100%;
+            padding: 7px;
+        }
         .word {
             width: 100%;
             margin-top: 25px;
@@ -308,7 +313,8 @@
         }
         .foot_one {
             flex-direction: column;
-            gap: 35px;
+            /* gap: 35px; */
+            padding: 7px;
         }
         .about {
             max-width: 100%;
@@ -317,10 +323,10 @@
             max-width: 100%;
         }
         .contact th {
-            padding: 7px;
+            padding: 5px;
         }
         .contact td {
-            padding: 7px;
+            padding: 5px;
         }
         .credit {
             flex-direction: column-reverse;

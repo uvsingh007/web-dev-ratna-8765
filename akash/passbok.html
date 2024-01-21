@@ -16,73 +16,52 @@
     <!-- passbook top  -->
     <nav class="position-s sticky-top">
         <div class="pass">
-            <i class="fa-solid fa-arrow-left"></i>
+            <a href="../rantu/index.html"> <i class="fa-solid fa-arrow-left"></i></a>
             <h5>PASSBOOK</h5>
         </div>
         <!-- passbook navbar -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary ">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto me-auto  mb-lg-0 ">
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold mx-5" aria-current="page" href="#">All</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold mx-5" href="#">Paid</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link  fw-bold mx-5" href="#">
-                      Received
-                    </a>
 
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  fw-bold mx-5" aria-disabled="true">Added</a>
-                    </li>
-                </ul>
+        <div class="sorting">
+            <h5 class="active">All</h5>
+            <h5>Paid</h5>
+            <h5>Received</h5>
+        </div>
 
-            </div>
-            </div>
-        </nav>
     </nav>
+
+
 
     <!-- transaction history -->
     <div class="transaction">
+        <h1>Transaction History</h1>
         <div class="passbook">
-            <h1>Transaction History</h1>
-            <ul id="transactionList"></ul>
+
+
+
+            <!-- <div class="singlecustomer">
+                <div class="image_r">
+                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Customer">
+                </div>
+                <div class="customerDetails">
+                    <div class="name_status common">
+                        <h5 class="h5">John Doe</h5>
+                        <p>Credited</p>
+                    </div>
+                    <div class="amount common">
+                        <h5 class="dollar">+$210.00</h5>
+                        <p>15 Jan 2024</p>
+                    </div>
+                </div>
+            </div> -->
+
+
+
         </div>
     </div>
 
 
 
 </body>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const transactionList = document.getElementById("transactionList");
-        const transactions = [{
-            type: 'debit',
-            amount: 50
-        }, {
-            type: 'credit',
-            amount: 100
-        }, {
-            type: 'debit',
-            amount: 30
-        }, {
-            type: 'credit',
-            amount: 200
-        }, {
-            type: 'debit',
-            amount: 80
-        }];
-        transactions.forEach(transaction => {
-            const li = document.createElement("li");
-            li.textContent = `Amount: $${transaction.amount}`;
-            li.classList.add(transaction.type);
-            transactionList.appendChild(li);
-        });
-    });
-</script>
-
+<script src="passbook.js"></script>
 
 </html>
