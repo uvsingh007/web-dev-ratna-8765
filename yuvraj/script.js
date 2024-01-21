@@ -101,6 +101,10 @@ function putBankIntoLocal(data){
     localStorage.setItem("bank",JSON.stringify(data));
 }
 
+function putUserIntoLocal(data){
+    console.log("hey");
+    localStorage.setItem("user",JSON.stringify(data));
+}
 // eventlistener to close
 closeButton.addEventListener("click",()=>{
     detailsWrapper.classList.toggle("hidden");
@@ -115,37 +119,67 @@ proceedButton.addEventListener("click",()=>{
 })
 
 // operations on submit data
-submitFormButton.addEventListener("click",()=>{
+submitFormButton.addEventListener("click",async function(e){
+    e.preventDefault();
+    if(checkInputData()){
+        userDetails=JSON.parse(localStorage.getItem("user"));
+        bankDetails=JSON.parse(localStorage.getItem("bank"));
+        console.log(userDetails,bankDetails);
+        addUser();
+        alert("Sign Up Successful!")
+        // window.location.href=`../rantu/index.html`
+    }
+    
+    
     // addUser();
 })
 
 //add Users in db 
 async function addUser(){
     try{
-        let userData = {
-            id:userDetails.id,
-            firstName:userDetails.firstName,
-            lastName:userDetails.lastName,
-            password:userDetails.password,
-            email:userDetails.email,
-            phone:userDetails.phone,
+        let obj = {
+            id:userDetails?.id,
+            firstName:userDetails?.firstName,
+            lastName:userDetails?.lastName,
+            password:userDetails?.password,
+            email:userDetails?.email,
+            phone:userDetails?.phone,
             bankDetails:{
-                passbookId:userDetails.bankDetails.passbookId,
-                bankName:bankDetails.name,
-                image:bankDetails.image,
+                passbookId:userDetails?.bankDetails.passbookId,
+                bankName:bankDetails?.name,
+                image:bankDetails?.image,
                 cardNumber:"",
                 accountNumber:confirmAccountNumberInput.value,
                 ifscCode:ifscInput.value,
                 branch:branchInput.value
             }
         }
+        console.log(obj);
+        putUserIntoLocal(obj);
         let res = await fetch(`${userUrl}`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
             },
-            body:JSON.stringify(userData)
+            body:JSON.stringify(obj)
         })
+        let data = await res.json();
+        console.log(data)
+        let passObj={
+            id:userDetails?.id,
+            amount:2000,
+            transactions:[]
+        }
+        let resPassbook = await fetch(`${passbookUrl}`,{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(passObj)
+        })
+        let dataPass = await resPassbook.json();
+        console.log(dataPass);
+
     }
     catch(error){
         console.log(error);
@@ -154,5 +188,17 @@ async function addUser(){
 
 // check input data
 function checkInputData(){
-
+    let obj={
+        accountNumber:accountNumberInput.value,
+        confirmAccountNumber:confirmAccountNumberInput.value,
+    }
+    if(!accountNumberInput.value||!confirmAccountNumberInput.value||!ifscInput.value||!branchInput.value){
+        alert("All fields are required. Please fill in all the fields!")
+        return;
+    }
+    if(obj.accountNumber!==obj.confirmAccountNumber){
+        alert("Acount number doesn't match!");
+        return;
+    }
+    return true;
 }
