@@ -71,7 +71,9 @@
         border-radius: 10px;
         overflow: hidden;
         /* height: 200px; */
-        width: 280px;
+        background-color: white;
+        cursor: pointer;
+        width: 250px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
     
@@ -92,7 +94,7 @@
     }
     
     .card-container:hover {
-        transform: scale(1.18);
+        transform: scale(1.05);
         transition: transform 0.3s ease-in-out;
     }
     
@@ -250,9 +252,10 @@
         color: #cecece;
     }
     
-    @media (max-width: 760px) {
+    @media (max-width: 720px) {
         .container {
-            /* max-width: 540px; */
+            width: 0;
+            padding: 0;
             grid-template-columns: repeat(2, 1fr);
         }
         .image {
@@ -275,14 +278,14 @@
         }
         .foot_one {
             flex-direction: column;
-            gap: 35px;
+            /* gap: 35px; */
         }
         .about {
             max-width: 80%;
         }
     }
     
-    @media (max-width: 360px) {
+    @media (max-width: 480px) {
         .container {
             grid-template-columns: 1fr;
             /* width: 100%; */
@@ -296,6 +299,10 @@
         .image2 {
             display: none;
         }
+        .merchant {
+            width: 100%;
+            padding: 7px;
+        }
         .word {
             width: 100%;
             margin-top: 25px;
@@ -308,7 +315,8 @@
         }
         .foot_one {
             flex-direction: column;
-            gap: 35px;
+            /* gap: 35px; */
+            padding: 7px;
         }
         .about {
             max-width: 100%;
@@ -317,10 +325,10 @@
             max-width: 100%;
         }
         .contact th {
-            padding: 7px;
+            padding: 5px;
         }
         .contact td {
-            padding: 7px;
+            padding: 5px;
         }
         .credit {
             flex-direction: column-reverse;

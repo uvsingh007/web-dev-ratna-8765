@@ -1,22 +1,52 @@
 let baseUrl = `https://mockserver-aq5n.onrender.com`;
 let passbookUrl = `${baseUrl}/passbook`;
-let userUrl = `${baseUrl}/users`;
-
-let passbookArray = document.querySelector(".transactions-wrapper");
-let userName = document.querySelector("#user-name");
-let totalBalance = document.querySelector(".total-balance-amount");
-let passbookData;
 let userData = JSON.parse(localStorage.getItem("user"));
+let passbookArray = document.querySelector(".passbook");
+let all = document.getElementById("all");
+let paid = document.getElementById("paid");
+let received = document.getElementById("Received");
+
+let passbookData;
+
+
+const sortingElements = document.querySelectorAll('.sorting h5');
+sortingElements.forEach(element => {
+    element.addEventListener('click', () => {
+        sortingElements.forEach(otherElement => {
+            otherElement.classList.remove('selected');
+        });
+        element.classList.add('selected');
+    });
+});
+
+all.addEventListener("click", () => {
+    appendToDOM(passbookData.transactions)
+
+})
+
+paid.addEventListener("click", () => {
+    appendToDOM(passbookData.transactions.filter((curr) => {
+        if (curr.type === 'debit') {
+            return curr;
+        }
+
+
+    }))
+})
+
+received.addEventListener("click", () => {
+    appendToDOM(passbookData.transactions.filter((curr) => {
+        if (curr.type === 'credit') {
+            return curr;
+        }
+    }))
+})
+
 function appendToDOM(customers) {
     passbookArray.innerHTML = "";
-    // let h3 = document.createElement("h3");
-    // h3.id = "transaction";
-    // h3.innerText = "Transactions";
-    // passbookArray.append(h3);
     customers.forEach(element => {
 
         let customer1 = singleCard(element);
-       
         passbookArray.append(customer1)
     });
 }
@@ -42,16 +72,14 @@ function singleCard(item) {
 
     let name = document.createElement("h5");
     name.className = "h5";
-    name.innerText = item.from ? item.from : userData.firstName ;
+    name.innerText = item.from ? item.from : userData.firstName;
 
     let status = document.createElement("p");
-    if(item.type === "debit"){
+    if (item.type === "debit") {
         status.innerText = `${item.title} to ${item.recipient}`;
-    }else{
+    } else {
         status.innerText = `${item.title}`;
     }
-    
-
     customerStatus.append(name, status)
 
 
@@ -83,21 +111,10 @@ async function fetchData(id) {
         let res = await fetch(`${passbookUrl}/${id}`);
         let data = await res.json();
         passbookData = data;
-        appendToDOM(passbookData.transactions);
-        totalBalanceDynamic(passbookData);
+        appendToDOM(passbookData.transactions)
         console.log(data);
     } catch (error) {
         console.log(error);
     }
 }
-fetchData(userData.id);
-
-function userCardDynamic(item){
-    userName.innerText = `${item.firstName} ${item.lastName}.`;
-}
-userCardDynamic(userData);
-
-
-function totalBalanceDynamic(item){
-    totalBalance.innerText = `$${item.amount}.00`;
-}
+fetchData(userData.id)
