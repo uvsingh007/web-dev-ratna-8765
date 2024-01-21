@@ -119,7 +119,7 @@ proceedButton.addEventListener("click",()=>{
 })
 
 // operations on submit data
-submitFormButton.addEventListener("click",async function(e){
+submitFormButton.addEventListener("click", function(e){
     e.preventDefault();
     if(checkInputData()){
         userDetails=JSON.parse(localStorage.getItem("user"));
@@ -127,7 +127,7 @@ submitFormButton.addEventListener("click",async function(e){
         console.log(userDetails,bankDetails);
         addUser();
         alert("Sign Up Successful!")
-        // window.location.href=`../rantu/index.html`
+        window.location.href=`../rantu/index.html`
     }
     
     
