@@ -77,7 +77,7 @@
                 <i class="fa-solid fa-user"></i>
             </div>
 
-            <p id="welcome">Hello User!<br> Welcome to <span style="color:#0071bc; font-weight: bold;">Digital Pay.</span></p>
+            <p id="welcome">Hello! <span id="user-name"></span><br> Welcome to <span style="color:#0071bc; font-weight: bold;">Digital Pay.</span></p>
 
             <!-- <div class="send-button">
                 <i class="fa-solid fa-paper-plane"></i>
@@ -86,7 +86,7 @@
             
             <div class="total-balance">
                 <p class="total-balance-text">Total Balance</p>
-                <h2 class="total-balance-amount">$ 500.00</h2>
+                <h2 class="total-balance-amount"></h2>
             </div>
         </div>
    </div>
@@ -95,34 +95,34 @@
     <!-- Options -->
 
     <div class="main_part">
-        <div class="hero-options_r">
+       <div class="hero-options_r">
             <div class="options_r">
-                <div style="background-color: rgba(0, 170, 255, 0.503);" class="box_r">
-                    <img src="https://media.istockphoto.com/id/646887790/vector/hand-with-money.jpg?s=612x612&w=0&k=20&c=s5jBNP4aoZlxP8dy1-SREQaYlzy4PFX7PmJtxSSDve8=" alt="money">
+                <div class="box_r">
+                    <img src="../assets/send.png" alt="money">
                 </div>
                 <div class="a_money anchor1_r">
                     <a href="./payPage/pay.html">Send</a>
                 </div>
             </div>
-            <div class="options_r">
-                <div style="background-color: rgba(0, 170, 255, 0.503)" class="box_r">
-                    <img src="https://media.istockphoto.com/id/1216964305/vector/bank-icon-building-house-vector-blue-color.jpg?s=612x612&w=0&k=20&c=r_wBAcKLqaYcN2HurMM-WGMZDHuhFnA_oZH_hXlVt2A=" alt="bank">
+             <div class="options_r">
+                <div class="box_r">
+                    <img src="../assets/transfer.png" alt="bank">
                 </div>
                 <div class="a_bank anchor1_r">
                     <a href="#">Transfer</a>
                 </div>
             </div>
             <div class="options_r">
-                <div style="background-color: rgba(0, 170, 255, 0.503);" class="box_r">
-                    <img src="https://cdn-icons-png.flaticon.com/512/10149/10149443.png" alt="passbook">
+                <div class="box_r">
+                    <img src="../assets/passbook.png" alt="passbook">
                 </div>
                 <div class="a_passbook anchor1_r">
-                    <a href="#">Passbook</a>
+                    <a href="../akash/passbok.html">Passbook</a>
                 </div>
             </div>
             <div class="options_r">
-                <div style="background-color: rgba(0, 170, 255, 0.503);" class="box_r">
-                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Profile">
+                <div class="box_r">
+                    <img src="../assets/user.png" alt="Profile">
                 </div>
                 <div class="a_more anchor1_r">
 
@@ -130,24 +130,23 @@
 
                 </div>
             </div>  
-            <div class="options_r">
-                <div style="background-color: rgba(0, 170, 255, 0.503);" class="box_r">
-                    <img src="https://thumbs.dreamstime.com/b/cash-finance-money-icon-blue-color-design-isolated-white-background-use-graphic-web-commercial-purposes-vector-223421224.jpg" alt="Balance">
-                </div>
+             <div class="options_r">
+                <div class="box_r">
+                    <img src="../assets/balance.png" alt="Balance">
                 <div class="a_more anchor1_r">
                     <a href="#">Balance</a>
                 </div>
             </div> 
-            <div class="options_r">
-                <div style="background-color: rgba(0, 170, 255, 0.503);" class="box_r">
-                    <img src="https://t3.ftcdn.net/jpg/03/18/54/12/360_F_318541265_iMXeXxlsrrMpPpsuHuzW1DojKzN1hJQG.jpg" alt="Investors">
+           <div class="options_r">
+                <div class="box_r">
+                    <img src="../assets/fasttag.png" alt="Investors">
                 </div>
                 <div class="a_more anchor1_r">
-                    <a href="#">Investors</a>
+                    <a href="#">Fasttags</a>
                 </div>
             </div> 
             <div class="options_r">
-                <div style="background-color: rgba(0, 170, 255, 0.503);" class="box_r">
+                <div class="box_r">
                     <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/consumer-discuss-1618748-1372434.png?f=webp" alt="Consumers">
                 </div>
                 <div class="a_more anchor1_r">
@@ -156,111 +155,18 @@
 
             </div>
             <div class="options_r">
-                <div style="background-color: rgba(0, 170, 255, 0.503);" class="box_r">
+                <div class="box_r">
                     <i  class="fa-solid fa-plus plus"></i>
                 </div>
                 <div class="a_more anchor1_r">
                     <a href="#">More</a>
                 </div>
             </div>
-        </div>
+        </div> 
+        
         <div class="details_r">
-            <h3 style="margin-bottom: 20px; font-weight: 600; color: #0071bc">Transactions</h3>
-            <div class="singlecustomer">
-                <div class="image_r">
-                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Customer">
-                </div>
-                <div class="customerDetails">
-                    <div class="name_status common">
-                        <h5 class="h5">John Doe</h5>
-                        <p>Credited</p>
-                    </div>
-                    <div class="amount common">
-                        <h5 class="dollar">+$210.00</h5>
-                        <p>15 Jan 2024</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="singlecustomer">
-                <div class="image_r">
-                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Customer">
-                </div>
-                <div class="customerDetails">
-                    <div class="name_status common">
-                        <h5 class="h5">Ammela Neison</h5>
-                        <p>Transfered</p>
-                    </div>
-                    <div class="amount common">
-                        <h5 class="dollar">+$310.00</h5>
-                        <p>12 Jan 2024</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="singlecustomer">
-                <div class="image_r">
-                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Customer">
-                </div>
-                <div class="customerDetails">
-                    <div class="name_status common">
-                        <h5 class="h5">Martin Anderson</h5>
-                        <p>Add to Wallet</p>
-                    </div>
-                    <div class="amount common">
-                        <h5 class="dollar">+$200.00</h5>
-                        <p>09 Jan 2024</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="singlecustomer">
-                <div class="image_r">
-                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Customer">
-                </div>
-                <div class="customerDetails">
-                    <div class="name_status common">
-                        <h5 class="h5">Conor Crowley</h5>
-                        <p>Sent</p>
-                    </div>
-                    <div class="amount common">
-                        <h5 class="dollar" style="color: red">-$210.00</h5>
-                        <p>01 Jan 2024</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="singlecustomer">
-                <div class="image_r">
-                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Customer">
-                </div>
-                <div class="customerDetails">
-                    <div class="name_status common">
-                        <h5 class="h5">Stephen Smith</h5>
-                        <p>Debited</p>
-                    </div>
-                    <div class="amount common">
-                        <h5 class="dollar" style="color: red">-$250.00</h5>
-                        <p>15 Nov 2023</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="singlecustomer">
-                <div class="image_r">
-                    <img src="https://as2.ftcdn.net/v2/jpg/00/75/13/25/1000_F_75132523_xkLZqbPQkUvVzWSftTf3nAGBjBFkcKuP.jpg" alt="Customer">
-                </div>
-                <div class="customerDetails">
-                    <div class="name_status common">
-                        <h5 class="h5">Devid Smith</h5>
-                        <p>Credited</p>
-                    </div>
-                    <div class="amount common">
-                        <h5 class="dollar">+$200.00</h5>
-                        <p>15 Sept 2023</p>
-                    </div>
-                </div>
-            </div>
+            
+          
         
         </div>
         
