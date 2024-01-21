@@ -4,93 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Successfull</title>
-    <style>
-        body{
-            background: linear-gradient(135deg, hsla(253, 87%, 50%, 1) 9%, hsla(197, 100%,60%,1)82%);
-            display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-        }
-        .payment-success {
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    color: #4CAF50;
-}
-
-.payment-success {
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    color: #000000;
-}
-
-.icon {
-    width: 100px;
-    height: 100px;
-    background-color: #4CAF50;
-    border-radius: 50%;
-    display: inline-block;
-    margin-bottom: 20px;
-    transform-origin: center;
-    animation: iconAnimation 1s ease-in-out infinite alternate;
-}
-
-.icon:before {
-    content: '\2713';
-    font-size: 60px;
-    color: #fff;
-    line-height: 100px;
-    display: block;
-    transform-origin: center;
-  
-}
-
-p {
-    font-size: 30px;
-    font-weight: bold;
-    margin: 0;
-   
-}
-
-/* Animation */
-.payment-success {
-    animation: successAnimation 2s ease-in-out;
-}
-
-@keyframes successAnimation {
-    0% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.2);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes iconAnimation {
-    0% {
-        transform: scale(1) rotate(0deg);
-        box-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
-    }
-    100% {
-        transform: scale(1.2) rotate(20deg);
-        box-shadow: 0 0 20px rgba(76, 175, 80, 0.8);
-    }
-}
-
-
- </style>
+    <link rel="stylesheet" href="payment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="payment-success">
         <div class="icon"></div>
         <p>Payment Successful!</p>
     </div>
+  
+    <a id="dashboard" href="/web-dev-ratna-8765/rantu/index.html">Back to Dashboard</a>
+   
 </body>
 </html>

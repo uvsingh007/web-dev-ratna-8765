@@ -4,6 +4,7 @@ let mainSection = document.getElementById("mainsection");
 let search = document.getElementById("search");
 let sortAtoZ = document.getElementById("sort");
 let sortZtoA = document.getElementById("sort2");
+let backbtn = document.getElementById("backbtn");
 
 async function fetchdata(url) {
   try {
@@ -80,5 +81,8 @@ search.addEventListener("input", () => {
     }, 1200);
 });
 
+backbtn.addEventListener("click", () => {
+    window.history.back();
+})
 
  

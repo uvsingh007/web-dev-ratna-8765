@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+  
+    display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+margin: 0;
+flex-direction: column;
+}
+.payment-success {
+text-align: center;
+font-family: 'Arial', sans-serif;
+color: #4CAF50;
+}
+
+.payment-success {
+text-align: center;
+font-family: 'Arial', sans-serif;
+color: #000000;
+}
+
+.icon {
+width: 100px;
+height: 100px;
+background-color: #4CAF50;
+border-radius: 50%;
+display: inline-block;
+margin-bottom: 20px;
+transform-origin: center;
+animation: iconAnimation 1s ease-in-out infinite alternate;
+}
+
+.icon:before {
+content: '\2713';
+font-size: 60px;
+color: #fff;
+line-height: 100px;
+display: block;
+transform-origin: center;
+
+}
+
+p {
+font-size: 30px;
+font-weight: bold;
+margin: 0;
+
+}
+
+/* Animation */
+.payment-success {
+animation: successAnimation 2s ease-in-out;
+}
+
+@keyframes successAnimation {
+0% {
+opacity: 0;
+transform: scale(0.8);
+}
+50% {
+opacity: 1;
+transform: scale(1.2);
+}
+100% {
+opacity: 1;
+transform: scale(1);
+}
+}
+
+@keyframes iconAnimation {
+0% {
+transform: scale(1) rotate(0deg);
+box-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
+}
+100% {
+transform: scale(1.2) rotate(20deg);
+box-shadow: 0 0 20px rgba(76, 175, 80, 0.8);
+}
+}
+
+#dashboard{
+   margin-top: 50px;
+   text-decoration: none;
+   font-size: 15px;
+   border: 1px solid rgb(65,17,237);
+   background-color: rgb(65,17,237);
+   color: white;
+   border-radius: 10px;
+   padding: 10px;
+   cursor: pointer;
+}
+#dashboard:hover{
+    background-color: white;
+    color: rgb(65,17,237);
+    border: 1px solid rgb(65,17,237);
+}

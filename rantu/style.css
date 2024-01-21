@@ -15,12 +15,20 @@
     height: 60px;
     margin-left: 80px;
 }
+#pro{
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+}
 #pro:hover{
     color: white;
+    background-color: #0071bc;
 }
 #notificationButton{
-    box-sizing: border-box;
+    border: 1px solid;
+    height: 45px;
     margin-left: 5px;
+    margin-top: 8px;
 }
 #digi{
     color: #0071bc;
@@ -85,8 +93,8 @@
     /* border-radius: 50%; */
 }
 .anchor1_r{
-    width: 90px;
-    height: 30px;
+    /* width: 90px;
+    height: 30px; */
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -101,17 +109,20 @@
     background-color: #0071bc;
 }
 .anchor1_r>a{
+    padding: 10px;
     font-size: 14px;
     text-decoration: none;
-    color: #0071bc;
+    /* color: #0071bc; */
 }
 .anchor1_r>a:hover{
     cursor: pointer;
+    background-color: #0071bc;
     color: white;
+ 
 }
 .a_money{
     border: 1px solid #0071bc;
-    background-color: #0080bc10;
+    /* background-color: #0080bc10; */
 }
 /* .a_bank>a{
     color : rgb(85, 214, 59);
@@ -140,8 +151,8 @@
     font-weight: 900;
 }
 
-.transactions-wrapper{
-
+.nav-item a{
+    cursor: pointer;
 }
 .head{
     max-width: 100%;
@@ -479,20 +490,35 @@ footer .foot_one {
 
     .foot_one {
         flex-direction: column;
-        gap: 35px;
+        /* gap: 35px; */
     }
     .about {
         max-width: 80%;
     }
-    .anchor1_r{
-        /* display:none; */
-    }
+   
 }
 
-/* .foot_one {
-    flex-direction: column;
-    gap: 35px;
+@media all and (max-width: 480px) {
+    .foot_one {
+        flex-direction: column;
+        /* gap: 35px; */
+        padding: 20px;
+    }
+    .about {
+        max-width: 100%;
+    }
+    .contact {
+        max-width: 100%;
+    }
+    .contact th {
+        padding: 5px;
+    }
+    .contact td {
+        padding: 5px;
+    }
+    .credit {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+   
 }
-.about {
-    max-width: 100%;
-} */
