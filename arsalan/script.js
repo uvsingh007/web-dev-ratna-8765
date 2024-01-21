@@ -158,7 +158,27 @@ signupBtn.addEventListener('click',(e)=>{
         alert('Account Already Exists with this Email or Phone Number. Please SignIn!');
     }
     else{
+        let obj = {
+            id: userData.length + 1,
+            firstName:signupFirstNameInput.value,
+            lastName:signupLastNameInput.value,
+            email:signupEmailInput.value,
+            phone:signupPhoneInput.value,
+            password:signupConfirmPasswordInput.value,
+            bankDetails:{
+                passbookId:userData.length + 1,
+                bankName:"",
+                image:"",
+                cardNumber:"",
+                accountNumber:"",
+                ifscCode:"",
+                branch:""
+            }
+
+        }
+        putUsersIntoLocal(obj);
         window.location.href = '/web-dev-ratna-8765/yuvraj/index.html';
+
     }
   
 
