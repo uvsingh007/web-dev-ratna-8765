@@ -1,7 +1,46 @@
 let baseUrl = `https://mockserver-aq5n.onrender.com`;
 let passbookUrl = `${baseUrl}/passbook`;
-
+let userData = JSON.parse(localStorage.getItem("user"));
 let passbookArray = document.querySelector(".passbook");
+let all = document.getElementById("all");
+let paid = document.getElementById("paid");
+let received = document.getElementById("Received");
+
+let passbookData;
+
+
+const sortingElements = document.querySelectorAll('.sorting h5');
+sortingElements.forEach(element => {
+    element.addEventListener('click', () => {
+        sortingElements.forEach(otherElement => {
+            otherElement.classList.remove('selected');
+        });
+        element.classList.add('selected');
+    });
+});
+
+all.addEventListener("click", () => {
+    appendToDOM(passbookData.transactions)
+
+})
+
+paid.addEventListener("click", () => {
+    appendToDOM(passbookData.transactions.filter((curr) => {
+        if (curr.type === 'debit') {
+            return curr;
+        }
+
+
+    }))
+})
+
+received.addEventListener("click", () => {
+    appendToDOM(passbookData.transactions.filter((curr) => {
+        if (curr.type === 'credit') {
+            return curr;
+        }
+    }))
+})
 
 function appendToDOM(customers) {
     passbookArray.innerHTML = "";
@@ -33,11 +72,14 @@ function singleCard(item) {
 
     let name = document.createElement("h5");
     name.className = "h5";
-    name.innerText = item.transactions[0].from
+    name.innerText = item.from ? item.from : userData.firstName;
 
     let status = document.createElement("p");
-    status.innerText = item.transactions[0].type;
-
+    if (item.type === "debit") {
+        status.innerText = `${item.title} to ${item.recipient}`;
+    } else {
+        status.innerText = `${item.title}`;
+    }
     customerStatus.append(name, status)
 
 
@@ -46,16 +88,16 @@ function singleCard(item) {
 
     let amount = document.createElement("h5")
     amount.className = "dollar";
-    if (status.innerText === 'credit') {
-        amount.innerText = `+$${item.transactions[0].amount} `
+    if (item.type === 'credit') {
+        amount.innerText = `+$${item.amount} `
         amount.style.color = 'green'
     } else {
-        amount.innerText = `-$${item.transactions[0].amount} `
+        amount.innerText = `-$${item.amount} `
         amount.style.color = 'red'
     }
 
     let date = document.createElement("p");
-    date.innerText = item.transactions[0].date;
+    date.innerText = item.date;
     ammountBox.append(amount, date)
 
     customerDetail.append(customerStatus, ammountBox)
@@ -64,14 +106,15 @@ function singleCard(item) {
     return singleCard
 }
 
-async function fetchData() {
+async function fetchData(id) {
     try {
-        let res = await fetch(`${baseUrl}/passbook`);
+        let res = await fetch(`${passbookUrl}/${id}`);
         let data = await res.json();
-        appendToDOM(data)
+        passbookData = data;
+        appendToDOM(passbookData.transactions)
         console.log(data);
     } catch (error) {
         console.log(error);
     }
 }
-fetchData()
+fetchData(userData.id)

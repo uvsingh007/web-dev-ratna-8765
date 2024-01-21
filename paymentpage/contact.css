@@ -1,6 +1,11 @@
-body{
+.body1{
     background: linear-gradient(135deg, hsla(253, 87%, 50%, 1) 9%, hsla(197, 100%,60%,1)82%);
-    height: auto;
+   min-height: 100vh;
+   padding-top: 100px;
+
+}
+*{
+    margin: 0;
 }
 a{
     text-decoration: none;
@@ -31,7 +36,6 @@ a{
 #search{
     margin-left: 10px;
     font-size: 15px;
-    width: 300px;
     padding: 10px;
     font-weight: bold;
     border-radius: 10px;
@@ -41,11 +45,11 @@ a{
 #contactdiv{
 
  border-radius: 20px 20px 0px 0px;
- width: 600px;
+ width: 70%;
  margin: auto;
  padding: 20px;
  background-color: white;
- margin-top: 100px;
+
  height: auto;
 }
 .contact-icon{
@@ -97,7 +101,7 @@ a{
 
 }
 .contactcard i{
-    font-size: 30px;
+    font-size: 20px;
     margin-right: 10px;
     margin-left: 10px;
     color: rgb(65,17,237);
@@ -107,7 +111,7 @@ a{
 }
 
 .contactcard p{
-    font-size: 20px;
+    font-size: 18px;
     margin-left: 10px;
     font-weight: bold;
 }

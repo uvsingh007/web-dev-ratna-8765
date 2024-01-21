@@ -129,7 +129,7 @@
     outline: none;
 }
 
-.details button{
+#submit-form-button{
     padding: 10px 20px;
     border: 1px solid white;
     color: white;
@@ -137,6 +137,7 @@
     background-color: #4011ec;
     font-weight: 800;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .details-cont>svg{
