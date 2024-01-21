@@ -44,7 +44,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    /* justify-content: center; */
     align-items: center;
 }
 #transaction{
@@ -62,6 +62,7 @@
     justify-content: center;
     align-items: center;
     transition: .6s;
+    background-color: white;
 }
 .box_r:hover{
     transform: scale(1.1);
@@ -78,15 +79,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -50px;
+    /* margin-top: -50px; */
     font-size: larger;
     /* font-weight: 600; */
+}
+.anchor1_r:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #0071bc;
 }
 .anchor1_r>a{
     font-size: 14px;
     text-decoration: none;
     color: #0071bc;
-   
+}
+.anchor1_r>a:hover{
+    cursor: pointer;
+    color: white;
 }
 .a_money{
     border: 1px solid #0071bc;
@@ -114,7 +123,9 @@
     transform: scale(5);
     color : #0071bc;
 }
-
+#user-name{
+    color: #0071bc;
+}
 
 .head{
     width: 100%;

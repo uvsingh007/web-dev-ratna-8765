@@ -1,7 +1,12 @@
 let baseUrl = `https://mockserver-aq5n.onrender.com`;
+let passbookUrl = `${baseUrl}/passbook`;
+let userUrl = `${baseUrl}/users`;
 
 let passbookArray = document.querySelector(".details_r");
+let userName = document.querySelector("#user-name");
+let totalBalance = document.querySelector(".total-balance-amount");
 let passbookData;
+let userData = JSON.parse(localStorage.getItem("user"));
 function appendToDOM(customers) {
     passbookArray.innerHTML = "";
     let h3 = document.createElement("h3");
@@ -37,10 +42,15 @@ function singleCard(item) {
 
     let name = document.createElement("h5");
     name.className = "h5";
-    name.innerText = item.from
+    name.innerText = item.from ? item.from : userData.firstName ;
 
     let status = document.createElement("p");
-    status.innerText = item.type;
+    if(item.type === "debit"){
+        status.innerText = `${item.title} to ${item.recipient}`;
+    }else{
+        status.innerText = `${item.title}`;
+    }
+    
 
     customerStatus.append(name, status)
 
@@ -50,7 +60,7 @@ function singleCard(item) {
 
     let amount = document.createElement("h5")
     amount.className = "dollar";
-    if (status.innerText === 'credit') {
+    if (item.type === 'credit') {
         amount.innerText = `+$${item.amount} `
         amount.style.color = 'green'
     } else {
@@ -68,15 +78,26 @@ function singleCard(item) {
     return singleCard
 }
 
-async function fetchData() {
+async function fetchData(id) {
     try {
-        let res = await fetch(`${baseUrl}/passbook/2`);
+        let res = await fetch(`${passbookUrl}/${id}`);
         let data = await res.json();
         passbookData = data;
         appendToDOM(passbookData.transactions);
+        totalBalanceDynamic(passbookData);
         console.log(data);
     } catch (error) {
         console.log(error);
     }
 }
-fetchData()
+fetchData(userData.id);
+
+function userCardDynamic(item){
+    userName.innerText = `${item.firstName} ${item.lastName}.`;
+}
+userCardDynamic(userData);
+
+
+function totalBalanceDynamic(item){
+    totalBalance.innerText = `$${item.amount}.00`;
+}
