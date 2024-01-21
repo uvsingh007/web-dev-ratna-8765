@@ -2,17 +2,17 @@ let baseUrl = `https://mockserver-aq5n.onrender.com`;
 let passbookUrl = `${baseUrl}/passbook`;
 let userUrl = `${baseUrl}/users`;
 
-let passbookArray = document.querySelector(".details_r");
+let passbookArray = document.querySelector(".transactions-wrapper");
 let userName = document.querySelector("#user-name");
 let totalBalance = document.querySelector(".total-balance-amount");
 let passbookData;
 let userData = JSON.parse(localStorage.getItem("user"));
 function appendToDOM(customers) {
     passbookArray.innerHTML = "";
-    let h3 = document.createElement("h3");
-    h3.id = "transaction";
-    h3.innerText = "Transactions";
-    passbookArray.append(h3);
+    // let h3 = document.createElement("h3");
+    // h3.id = "transaction";
+    // h3.innerText = "Transactions";
+    // passbookArray.append(h3);
     customers.forEach(element => {
 
         let customer1 = singleCard(element);
