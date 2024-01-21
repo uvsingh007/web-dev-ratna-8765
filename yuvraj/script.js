@@ -2,8 +2,10 @@
 let baseUrl = `https://mockserver-aq5n.onrender.com`;
 // url for fetching banks
 let bankUrl = `${baseUrl}/banks`;
-// url for fetching banks
+// url for fetching users
 let userUrl = `${baseUrl}/users`;
+// url for fetching passbooks
+let passbookUrl = `${baseUrl}/passbook`;
 //container where the card will be appended
 let wrapper = document.querySelector(".wrapper");
 //button to proceed after selecting bank;
@@ -24,6 +26,8 @@ let confirmAccountNumberError=document.getElementById("confirm-account-number-er
 let ifscError=document.getElementById("ifsc-error");
 let branchError= document.getElementById("branch-error");
 
+let userDetails;
+let bankDetails;
 
 //variable to store bank data after fetch
 let bankData;
@@ -119,14 +123,14 @@ submitFormButton.addEventListener("click",()=>{
 async function addUser(){
     try{
         let userData = {
-            // id:userDetails.id,
+            id:userDetails.id,
             firstName:userDetails.firstName,
             lastName:userDetails.lastName,
             password:userDetails.password,
             email:userDetails.email,
             phone:userDetails.phone,
             bankDetails:{
-                // passbookId:userDetails.id,
+                passbookId:userDetails.bankDetails.passbookId,
                 bankName:bankDetails.name,
                 image:bankDetails.image,
                 cardNumber:"",
