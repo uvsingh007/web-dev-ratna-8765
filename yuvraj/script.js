@@ -202,3 +202,18 @@ function checkInputData(){
     }
     return true;
 }
+
+// async function deleteUser(){
+//     try{
+//         let res = fetch(`${userUrl}/9`,{
+//             method:"DELETE"
+//         })
+//         // let data = await res.json();
+//         // console.log(data)
+//     }
+//     catch(error){
+//         console.log(error)
+//     }
+// }
+
+// deleteUser()
