@@ -6,6 +6,7 @@
 }
 *{
     margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 a{
     text-decoration: none;
@@ -40,17 +41,26 @@ a{
     font-weight: bold;
     border-radius: 10px;
     border: 1px solid #000;
+    width: 400px;
 }
 
 #contactdiv{
 
- border-radius: 20px 20px 0px 0px;
- width: 70%;
+ border-radius: 20px 20px 20px 20px;
+ width: 60%;
  margin: auto;
- padding: 20px;
+ padding: 50px;
  background-color: white;
-
+animation: slideup 1s ease;
  height: auto;
+}
+@keyframes slideup{
+    0%{
+        transform: translateY(900px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
 .contact-icon{
     font-size: 30px;
@@ -95,6 +105,7 @@ a{
     align-items: center;
     border-radius: 10px;
     margin-bottom: 10px;
+    padding: 10px;
     height: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     cursor: pointer;
@@ -115,6 +126,51 @@ a{
     margin-left: 10px;
     font-weight: bold;
 }
-.contactcard p:nth-child(1){
-    margin-bottom: -10px;
+#contact{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#loader {
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    width: 15px;
+    height: 15px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    margin: auto;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+@media all and (max-width: 768px) {
+   
+    #sortdiv{
+        margin-top:10px;
+        margin-bottom: 10px;
+    }
+    #search{
+        width: 200px;
+        margin-bottom: 10px;
+    }
+    #sort, #sort2{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #moneyTransfer {
+        margin-bottom: 10px;
+    }
+    #contact{
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
 }

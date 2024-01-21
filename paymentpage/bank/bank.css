@@ -1,0 +1,100 @@
+.body1{
+    background: linear-gradient(135deg, hsla(253, 87%, 50%, 1) 9%, hsla(197, 100%,60%,1)82%);
+   min-height: 92vh;
+   padding-top: 100px;
+
+}
+*{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#contactdiv{
+
+    border-radius: 20px 20px 20px 20px;
+    width: 60%;
+    margin: auto;
+    padding: 50px;
+    background-color: white;
+   animation: slideup 1s ease;
+    height: auto;
+   }
+   @keyframes slideup{
+       0%{
+           transform: translateY(900px);
+       }
+       100%{
+           transform: translateY(0px);
+       }
+   }
+   #container{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+   color: black;
+   
+}
+
+#container button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right:10px ;
+}
+#form a{
+    text-decoration: none;
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+    width: 100px;
+    border: 1px solid rgb(65,17,237);
+    background-color: rgb(65,17,237);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+#form a:hover{
+    background-color: white;
+    color: rgb(65,17,237);
+    border: 1px solid rgb(65,17,237);
+}
+.fa-arrow-left{
+    font-size: 25px;
+    color: black;
+
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+#form input{
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(65,17,237);
+    outline: none;
+}
+#form button{
+    margin: auto;
+
+    font-size: 15px;
+    width: 100px;
+    border: 1px solid rgb(65,17,237);
+    background-color: rgb(65,17,237);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+#form button:hover{
+    background-color: white;
+    color: rgb(65,17,237);
+    border: 1px solid rgb(65,17,237);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+

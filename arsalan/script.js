@@ -62,8 +62,8 @@ siginBtn.addEventListener("click", (e) => {
   e.preventDefault();
   console.log("hi");
   if (checkUsers(userData)) {
-    window.location.href = "/web-dev-ratna-8765/rantu/index.html";
     alert("Login Successful");
+    window.location.href = "/web-dev-ratna-8765/rantu/index.html";
   } else {
     alert("Invalid Credentials");
   }
