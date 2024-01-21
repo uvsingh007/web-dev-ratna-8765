@@ -22,6 +22,18 @@
     box-sizing: border-box;
     margin-left: 5px;
 }
+#digi{
+    color: #0071bc;
+    font-weight: 700;
+}
+.user-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    flex-wrap: wrap;
+}
+
 .main_part{
     width: 100%;
     display: flex;
@@ -30,14 +42,15 @@
 .main_part >.hero-options_r{
     width: 60%;
     height: 60vh;
-    background-color: #dfdff3;
+    padding: 20px;
+    /* background-color: #dfdff3; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .main_part >.details_r{
     width: 40%;
     height: 60vh;
-    background-color: #dfdff3;
+    /* background-color: #dfdff3; */
     /* padding-right: 10px; */
 }
 .options_r{
@@ -45,6 +58,7 @@
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
+    gap:20px;
     align-items: center;
 }
 #transaction{
@@ -56,7 +70,6 @@
     width: 110px;
     height: 110px;
     /* border: 1px solid; */
-    border-radius: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,12 +78,11 @@
     background-color: white;
 }
 .box_r:hover{
-    transform: scale(1.1);
     cursor: pointer;
 }
 .box_r>img{
     width: 50px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 .anchor1_r{
     width: 90px;
@@ -125,25 +137,33 @@
 }
 #user-name{
     color: #0071bc;
+    font-weight: 900;
 }
 
+.transactions-wrapper{
+
+}
 .head{
-    width: 100%;
-    height: 200px;
+    max-width: 100%;
+    /* height: 200px; */
     background: linear-gradient(135deg, hsla(253, 87%, 50%, 1) 9%, hsla(197, 100%, 60%, 1) 82%);
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 50px;
 }
 .totalBalance{
-     width: 80%;
-     height: 80%;
+    text-align: center;
+     min-width: 60%;
+     padding: 30px;
+     gap:20px;
      background-color: rgba(255, 255, 255, 0.5);
      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
      border-radius: 10px;
      display: flex;
-     justify-content: space-around;
+     justify-content: space-between;
      align-items: center;
+     flex-wrap: wrap;
 }
 .total-balance>p{
     color : white;
@@ -184,11 +204,9 @@
 .profile{
     width: 100px;
     height: 100px;
-    border: 3px solid #1352e4;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
     transition: .5s ease-in-out;
 }
 .profile>i{
@@ -203,7 +221,7 @@
 /* //////////////////////////////////////////////////////////////////////////// */
 .details_r{
     width: 40%;
-    padding: 20px;
+    padding: 30px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     overflow-y: auto;
 }
@@ -233,6 +251,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 20px 0 20px;
+    gap: 20px;
 }
 .common>h5{
     font-weight: bolder;
@@ -243,9 +262,7 @@
 
 
 /* //////////////////////////////////////////////////////////////////////////// */
-.details_r{
-    width: 40%;
-}
+
 .transaction-container {
     height: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -431,22 +448,19 @@ footer .foot_one {
     .main_part {
         flex-direction: column;
     }
-    .totalBalance{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding-left: 20px;
-        height: auto;
-    }
+
 
     .main_part > .hero-options_r,
     .main_part > .details_r {
         width: 100%;
         height: auto;
     }
-
+    /* .total-balance{
+        display:block;
+    } */
     
     .main_part >.hero-options_r {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .recharge {
@@ -471,7 +485,7 @@ footer .foot_one {
         max-width: 80%;
     }
     .anchor1_r{
-        display:none;
+        /* display:none; */
     }
 }
 
