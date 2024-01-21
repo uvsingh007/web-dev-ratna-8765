@@ -20,7 +20,7 @@ body{
 }
 .profile_r{
     width: 70%;
-    height: 600px;
+    height: 700px;
     margin-top: 50px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 15px;
@@ -97,6 +97,28 @@ body{
     cursor: pointer;
     background-color: #0884d725;
 }
+.logout{
+    width: 100px;
+    height: 30px;
+    border: 1px solid #0071bc;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition-duration: .5s ease-in-out;
+    margin-top: 20px;
+}
+.logout>a{
+    text-decoration: none;
+    color: #0071bc;
+    font-weight: 600;
+}
+.logout:hover{
+    cursor: pointer;
+    background-color: #0884d725;
+}
+
 
 @media only screen and (max-width: 600px) {
     .profile_r, .user-details, .allDetails, .card, .addPayMethods {

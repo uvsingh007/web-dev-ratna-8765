@@ -15,6 +15,9 @@
     height: 60px;
     margin-left: 80px;
 }
+#pro:hover{
+    color: white;
+}
 #notificationButton{
     box-sizing: border-box;
     margin-left: 5px;
@@ -424,7 +427,7 @@ footer .foot_one {
     }
 
     
-    .hero-options_r {
+    .main_part >.hero-options_r {
         grid-template-columns: 1fr 1fr;
     }
 

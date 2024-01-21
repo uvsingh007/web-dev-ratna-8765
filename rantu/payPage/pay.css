@@ -1,0 +1,230 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, hsla(253, 87%, 50%, 1) 9%, hsla(197, 100%, 60%, 1) 82%);
+}
+img{
+    width: 100px;
+    border-radius: 50%;
+}
+.payment{
+    width: 70%;
+    height: 600px;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.upper{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.upper>h4{
+    color: white;
+    margin-bottom: 20px;
+}
+.upper>p{
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+}
+#inpt{
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    border-radius: 12px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.lower{
+    width: 70%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-top: 80px;
+    border-radius: 25px 25px 0 0;
+}
+
+.payInfo{
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+#payFrom, #avaBalance{
+    font-size: large;
+    font-weight: bolder;
+    color: #0071bc;
+}
+#fromType{
+    font-size: medium;
+}
+#amnt{
+    margin-left: 10px;
+    color: green;
+    font-size: 16px;
+}
+#payButton{
+    width: 120px;
+    height: 30px;
+    border: 1px solid #0071bc;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#payButton>a{
+    text-decoration: none;
+    color: #0071bc;
+}
+#payButton:hover{
+    cursor: pointer;
+    background-color: #0071bc17;
+} */
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, hsla(253, 87%, 50%, 1) 9%, hsla(197, 100%, 60%, 1) 82%);
+}
+
+img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.payment {
+    width: 70%;
+    height: 600px;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.upper {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upper > h4 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.upper > p {
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.inpt {
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    border-radius: 12px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.amnt_req{
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.lower {
+    width: 70%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-top: 80px;
+    border-radius: 25px 25px 0 0;
+    animation: slideUp 1s ease; /* Added animation */
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.payInfo {
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#payFrom,
+#avaBalance {
+    font-size: large;
+    font-weight: bolder;
+    color: #0071bc;
+}
+
+#fromType {
+    font-size: medium;
+}
+
+#amnt {
+    margin-left: 10px;
+    color: green;
+    font-size: 16px;
+}
+
+#payButton {
+    width: 120px;
+    height: 30px;
+    border: 1px solid #0071bc;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#payButton > a {
+    text-decoration: none;
+    color: #0071bc;
+}
+
+#payButton:hover {
+    cursor: pointer;
+    background-color: #0071bc17;
+}
