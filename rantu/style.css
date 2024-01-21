@@ -47,6 +47,11 @@
     justify-content: space-around;
     align-items: center;
 }
+#transaction{
+    margin-bottom: 20px;
+     font-weight: 600; 
+     color: #0071bc
+}
 .box_r{
     width: 110px;
     height: 110px;
