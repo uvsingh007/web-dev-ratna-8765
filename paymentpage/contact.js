@@ -31,7 +31,7 @@ function appenddata(data) {
 
 function createcard(data) {
   let link = document.createElement("a");
-  link.href = `/web-dev-ratna-8765/rantu/payPage/pay.html`;
+  link.href = `../rantu/payPage/pay.html`;
 
   link.addEventListener("click", () => {
     localStorage.setItem("contact", JSON.stringify(data));

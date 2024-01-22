@@ -99,5 +99,6 @@ userCardDynamic(userData);
 
 
 function totalBalanceDynamic(item){
+    console.log(item)
     totalBalance.innerText = `$${item.amount}.00`;
 }

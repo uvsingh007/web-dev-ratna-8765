@@ -63,7 +63,7 @@ siginBtn.addEventListener("click", (e) => {
   console.log("hi");
   if (checkUsers(userData)) {
     alert("Login Successful");
-    window.location.href = "/web-dev-ratna-8765/rantu/index.html";
+    window.location.href = "../rantu/index.html";
   } else {
     alert("Invalid Credentials");
   }
@@ -175,6 +175,6 @@ signupBtn.addEventListener("click", (e) => {
       },
     };
     putUsersIntoLocal(obj);
-    window.location.href = "/web-dev-ratna-8765/yuvraj/index.html";
+    window.location.href = "../yuvraj/index.html";
   }
 });
