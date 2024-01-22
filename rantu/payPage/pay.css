@@ -132,3 +132,8 @@ img {
     cursor: pointer;
     background-color: #0071bc17;
 }
+
+#name{
+    color: black;
+    margin-top: 10px;
+}
