@@ -24,7 +24,8 @@ fetchData(userData.id);
 function totalBalanceDynamic(item){
     totalBalance.innerText = `$${item.amount}.00`;
 }
+let contactDetails = JSON.parse(localStorage.getItem("contact"));
 function userCardDynamic(item){
-    userName.innerText = `${item.firstName} ${item.lastName}`;
+    userName.innerText = `${item.name}`;
 }
-userCardDynamic(userData);
+userCardDynamic(contactDetails);
