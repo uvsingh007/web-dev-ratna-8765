@@ -19,6 +19,8 @@ sortingElements.forEach(element => {
     });
 });
 
+
+
 all.addEventListener("click", () => {
     appendToDOM(passbookData.transactions)
 
@@ -44,12 +46,12 @@ received.addEventListener("click", () => {
 
 function appendToDOM(customers) {
     passbookArray.innerHTML = "";
-    customers.forEach(element => {
-
-        let customer1 = singleCard(element);
+    for (let i = customers.length - 1; i >= 0; i--) {
+        let customer1 = singleCard(customers[i]);
         passbookArray.append(customer1)
-    });
+    }
 }
+
 
 
 function singleCard(item) {

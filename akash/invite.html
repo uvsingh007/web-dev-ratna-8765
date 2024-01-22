@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Payment App - Contact Page</title>
+    <link rel="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/da6af75331.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        .body1 {
+            background: linear-gradient(135deg, hsla(253, 87%, 50%, 1) 9%, hsla(197, 100%, 60%, 1)82%);
+            min-height: 100vh;
+            padding-top: 100px;
+        }
+        
+        * {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        #container {
+            display: flex;
+            align-items: center;
+            color: black;
+            margin-bottom: 15px;
+        }
+        
+        .akash {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            margin-left: 45px;
+        }
+        
+        .akash_image {
+            display: flex;
+            gap: 17px;
+            margin-bottom: 15px;
+        }
+        
+        .akash_image img {
+            height: 35px;
+        }
+        
+        #container button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        
+        .fa-arrow-left {
+            font-size: 25px;
+            color: black;
+        }
+        
+        .akaah_btn {
+            justify-content: flex-end;
+        }
+        
+        .contactcard button {
+            font-size: 15px;
+            border: 1px solid rgb(65, 17, 237);
+            background-color: rgb(65, 17, 237);
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        
+        .contactcard button:hover {
+            background-color: white;
+            color: rgb(65, 17, 237);
+            border: 1px solid rgb(65, 17, 237);
+        }
+        
+        #search {
+            margin-left: 10px;
+            font-size: 15px;
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 10px;
+            border: 1px solid #000;
+            width: 400px;
+        }
+        
+        .icon_detail {
+            display: flex;
+        }
+        
+        #contactdiv {
+            border-radius: 20px 20px 20px 20px;
+            width: 60%;
+            margin: auto;
+            padding: 50px;
+            background-color: white;
+            animation: slideup 1s ease;
+            height: auto;
+        }
+        
+        @keyframes slideup {
+            0% {
+                transform: translateY(900px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        .contact-icon {
+            font-size: 30px;
+            margin-left: 10px;
+            margin-top: 10px;
+            padding-top: 1px;
+        }
+        
+        #sort {
+            margin-right: 10px;
+            margin-left: 10px;
+            font-size: 15px;
+            border: 1px solid rgb(65, 17, 237);
+            background-color: rgb(65, 17, 237);
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        
+        #sort:hover {
+            background-color: white;
+            color: rgb(65, 17, 237);
+            border: 1px solid rgb(65, 17, 237);
+        }
+        
+        #sort2 {
+            font-size: 15px;
+            border: 1px solid rgb(65, 17, 237);
+            background-color: rgb(65, 17, 237);
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        
+        #sort2:hover {
+            background-color: white;
+            color: rgb(65, 17, 237);
+            border: 1px solid rgb(65, 17, 237);
+            cursor: pointer;
+        }
+        
+        .contactcard {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+            height: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+        
+        .icon_detail i {
+            font-size: 20px;
+            margin-right: 10px;
+            margin-left: 10px;
+            color: rgb(65, 17, 237);
+            border-radius: 50%;
+            padding: 15px;
+            border: 2px solid rgb(65, 17, 237);
+        }
+        
+        .contactcard p {
+            font-size: 18px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        
+        #contact {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        
+        #loader {
+            border: 8px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 8px solid #3498db;
+            width: 15px;
+            height: 15px;
+            -webkit-animation: spin 2s linear infinite;
+            /* Safari */
+            animation: spin 2s linear infinite;
+            margin: auto;
+        }
+        /* Safari */
+        
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @media all and (max-width: 768px) {
+            #sortdiv {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            #search {
+                width: 200px;
+                margin-bottom: 10px;
+            }
+            #sort,
+            #sort2 {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            #moneyTransfer {
+                margin-bottom: 10px;
+            }
+            #contact {
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="body1">
+        <div id="contactdiv">
+            <div id="container">
+                <a href="../rantu/index.html"><button id="backbtn"><i class="fa-solid fa-arrow-left"></i></button></a>
+                <h1 id="moneyTransfer">Invite</h1>
+            </div>
+            <div class="akash">
+
+                <h5>Total reward</h5>
+                <div class="akash_image">
+                    <img src="../assets/consumer.png" alt="">
+                    <h2>$53</h2>
+                </div>
+
+
+            </div>
+
+            <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+            <input type="search" id="search" placeholder="Enter Name or Mobile Number">
+
+            <span class="material-symbols-outlined">
+    </span>
+
+
+            <h1 id="contact">Contacts</h1>
+            <div id="mainsection">
+
+            </div>
+
+            <div>
+
+            </div>
+            <!-- <div id="loader"></div> -->
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/da6af75331.js" crossorigin="anonymous"></script>
+
+    <script>
+        let baseURL = `https://mockserver-aq5n.onrender.com`;
+        let contactUrl = `${baseURL}/contacts`;
+        let mainSection = document.getElementById("mainsection");
+        let search = document.getElementById("search");
+        let sortAtoZ = document.getElementById("sort");
+        let sortZtoA = document.getElementById("sort2");
+        let backbtn = document.getElementById("backbtn");
+
+        async function fetchdata(url) {
+            try {
+                let res = await fetch(url);
+                let data = await res.json();
+
+                appenddata(data);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        fetchdata(`${contactUrl}`);
+
+        function appenddata(data) {
+            let contactlist = document.createElement("div");
+            contactlist.id = "contact_list";
+
+            data.forEach((element) => {
+                contactlist.append(createcard(element));
+            });
+            mainSection.innerHTML = "";
+            mainSection.append(contactlist);
+        }
+
+        function createcard(data) {
+            let link = document.createElement("a");
+
+
+            link.addEventListener("click", () => {
+                localStorage.setItem("contact", JSON.stringify(data));
+            })
+            let card = document.createElement("div");
+            card.className = "contactcard";
+
+            let icon_detail = document.createElement("div");
+            icon_detail.className = "icon_detail"
+
+
+            let icon = document.createElement("i");
+            icon.className = "fa-regular fa-user";
+
+            let details = document.createElement("div");
+            let p1 = document.createElement("p");
+            p1.textContent = data.name;
+
+            let p2 = document.createElement("p");
+            p2.textContent = data.number;
+
+            let btnDiv = document.createElement("div")
+            btnDiv.className = "btnDiv"
+
+            let btn = document.createElement("button");
+            btn.textContent = "Invite"
+            btn.addEventListener("click", (e) => {
+                e.preventDefault();
+                alert(`Your invitation has been sent to ${data.name} `)
+            })
+            btn.classList.add("akash_btn")
+            btnDiv.append(btn);
+
+            details.append(p1, p2);
+
+
+            icon_detail.append(icon, details)
+            card.append(icon_detail, btnDiv);
+            link.append(card);
+            return link;
+        }
+
+        sortAtoZ.addEventListener("click", () => {
+            fetchdata(`${contactUrl}?_sort=name&_order=asc`);
+        });
+
+        sortZtoA.addEventListener("click", () => {
+            fetchdata(`${contactUrl}?_sort=name&_order=desc`);
+        })
+        let timer;
+
+        search.addEventListener("input", () => {
+            if (timer) {
+                clearTimeout(timer);
+            }
+            timer = setTimeout(() => {
+                const searchTerm = search.value.trim();
+                console.log(Number(searchTerm));
+
+                if (!isNaN(Number(searchTerm))) {
+                    console.log("numinput");
+                    fetchdata(`${contactUrl}?number_like=${searchTerm}`);
+                } else {
+                    fetchdata(`${contactUrl}?name_like=${searchTerm}`);
+                }
+            }, 1200);
+        });
+
+        backbtn.addEventListener("click", () => {
+            window.history.back();
+        })
+    </script>
+</body>
+
+</html>
