@@ -83,7 +83,12 @@ async function fetchData(id) {
         let res = await fetch(`${passbookUrl}/${id}`);
         let data = await res.json();
         passbookData = data;
-        appendToDOM(passbookData.transactions);
+        if(passbookData.transactions.length === 0){
+            printEmpty();
+        }else{
+            appendToDOM(passbookData.transactions);
+        }
+        // appendToDOM(passbookData.transactions);
         totalBalanceDynamic(passbookData);
         console.log(data);
     } catch (error) {
@@ -91,6 +96,10 @@ async function fetchData(id) {
     }
 }
 fetchData(userData.id);
+
+function printEmpty(){
+    return passbookArray.innerText = `No transactions yet!`;
+}
 
 function userCardDynamic(item){
     userName.innerText = `${item.firstName} ${item.lastName}.`;

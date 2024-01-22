@@ -90,7 +90,10 @@
 }
 .box_r>img{
     width: 50px;
-    /* border-radius: 50%; */
+    transition-duration: .5s;
+}
+.box_r>img:hover{
+    transform: scale(1.2);
 }
 .anchor1_r{
     /* width: 90px;
