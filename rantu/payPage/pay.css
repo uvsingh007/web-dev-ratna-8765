@@ -137,3 +137,10 @@ img {
     color: black;
     margin-top: 10px;
 }
+
+@media all and (max-width: 768px) {
+    .payment {
+        width: 90%;
+        height: 600px;
+    }
+}
