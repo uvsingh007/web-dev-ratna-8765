@@ -129,9 +129,6 @@ submitFormButton.addEventListener("click",async function(e){
         alert("Sign Up Successful!")
         window.location.href=`../rantu/index.html`
     }
-    
-    
-    // addUser();
 })
 
 //add Users in db 
