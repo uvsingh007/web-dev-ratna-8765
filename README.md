@@ -23,11 +23,20 @@ Apex crafts is an online payment portal to make transactions swift and easy.
 
 
 
+# Tech Stack
+- HTML - used for structuring the website
+- CSS - used for styling the webpage
+- Javascript - used Javascript for making dynamic layouts
+- Bootstrap - used premade components
+- Json server - used json server to retrieval and modification of data
+
+
 
 ## Appendix
 
 - This website contains different features like send money, user authentication via fetch, used local storage for data transmission between pages etc.
 - The main objective of building this website is to get the practical knowledge of what we have learned in our Masai journey till date and to gain experience of working with a team on a live project.
+
 
 
 ## Contributors
@@ -40,10 +49,17 @@ Apex crafts is an online payment portal to make transactions swift and easy.
 
 
 
-## Demo
+# Deployed Link
 
-here is demo link :- https://web-dev-ratna-8765.netlify.app/
-## Screenshots
+Here is demo link :- https://web-dev-ratna-8765.netlify.app/
+
+# Deployed Server Link
+
+Here is server link :- https://mockserver-aq5n.onrender.com/
+
+# Deployed Server Repo Link
+
+Here is repo link :- https://github.com/uvsingh007/mockServer
 
 ![App Screenshot](https://drive.google.com/uc?export=view&id=1e2KZHSDawydBt4eJTpVqOpU97HZUBwu6)
 
