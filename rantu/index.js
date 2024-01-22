@@ -13,12 +13,10 @@ function appendToDOM(customers) {
     // h3.id = "transaction";
     // h3.innerText = "Transactions";
     // passbookArray.append(h3);
-    customers.forEach(element => {
-
-        let customer1 = singleCard(element);
-       
+    for(let i=customers.length-1; i>=0; i--){
+        let customer1 = singleCard(customers[i]);
         passbookArray.append(customer1)
-    });
+    }
 }
 
 
