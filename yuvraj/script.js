@@ -119,7 +119,7 @@ proceedButton.addEventListener("click",()=>{
 })
 
 // operations on submit data
-submitFormButton.addEventListener("click", function(e){
+submitFormButton.addEventListener("click",async function(e){
     e.preventDefault();
     if(checkInputData()){
         userDetails=JSON.parse(localStorage.getItem("user"));
@@ -129,9 +129,6 @@ submitFormButton.addEventListener("click", function(e){
         alert("Sign Up Successful!")
         window.location.href=`../rantu/index.html`
     }
-    
-    
-    // addUser();
 })
 
 //add Users in db 
@@ -205,7 +202,7 @@ function checkInputData(){
 
 // async function deleteUser(){
 //     try{
-//         let res = fetch(`${userUrl}/9`,{
+//         let res = fetch(`${passbookUrl}/9`,{
 //             method:"DELETE"
 //         })
 //         // let data = await res.json();
