@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://cdn-lbeob.nitrocdn.com/KppbcGjiOQtssfEzDllzjlrwdUfHLIUj/assets/images/optimized/rev-dc635ea/www.conduent.com/wp-content/uploads/2022/11/bnr_Digital_Integrated_Payments_Hub3.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+section {
+    position: relative;
+    z-index: 3;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.container {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.section-header {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.section-header h2 {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.section-header p {
+    color: #FFF;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-info {
+    width: 50%;
+}
+
+.contact-info-item {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.contact-info-icon {
+    height: 70px;
+    width: 70px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.contact-info-icon:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    transition: .2s ease-in-out;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-190px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.contact-info {
+    animation: slideInFromLeft 2s ease-out;
+}
+
+.contact-form {
+    animation: slideInFromRight 2s ease-out;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(190px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.container {
+    animation: appear 3s ease-out;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        /* transform: translateX(0); */
+        opacity: 1;
+    }
+}
+
+.contact-info-icon>i {
+    font-size: 30px;
+    line-height: 70px;
+}
+
+.contact-info-icon>i:hover {
+    color: #00bcd4;
+    /* transition: opacity 1.2s ease, transform 1.2s ease; */
+}
+
+.contact-info-content {
+    margin-left: 20px;
+}
+
+.contact-info-content h4 {
+    color: #1da9c0;
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+
+.contact-info-content p {
+    color: #FFF;
+    font-size: 1em;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 40px;
+    width: 45%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.contact-form h2 {
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-form .input-box {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contact-form .input-box input,
+.contact-form .input-box textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contact-form .input-box input[type="submit"] {
+    width: 100%;
+    background: #00bcd4;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #00bcd4;
+    transition: 0.5s;
+}
+
+.contact-form .input-box input[type="submit"]:hover {
+    background: #FFF;
+    color: #00bcd4;
+}
+
+footer {
+    background-color: #000000;
+    padding: 20px 36px;
+    color: #fff;
+    z-index: 1;
+}
+
+.foot_one {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.about {
+    font-size: 18px;
+    max-width: 30%;
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    color: #e2e1e1;
+}
+
+.contact {
+    color: #fff;
+}
+
+.contact th {
+    font-size: 16px;
+    margin-top: 10px;
+    padding-right: 95px;
+    padding-bottom: 20px;
+}
+
+.contact tr {
+    font-size: 14px;
+}
+
+.contact td {
+    padding-bottom: 10px;
+    color: grey;
+}
+
+.contact td:hover {
+    color: #4f88b1;
+    cursor: pointer;
+}
+
+.getUs {
+    text-align: center;
+    font-size: 18px;
+    color: #fffcfc;
+    margin-top: 20px;
+}
+
+.google_play img:hover {
+    cursor: pointer;
+}
+
+.credit {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.credit {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box i {
+    margin: 0 10px;
+    font-size: 26px;
+    color: #b5b5b5;
+}
+
+.box i:hover {
+    color: #4f88b1;
+    cursor: pointer;
+}
+
+.credit_tag {
+    color: #cecece;
+}
+
+.akash-logo {
+    height: 50px;
+    width: 150px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+@media all and (max-width: 760px) {
+    section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .contact-info {
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    .contact-form {
+        width: 100%;
+    }
+    .foot_one {
+        flex-direction: column;
+        gap: 18px;
+    }
+    .about {
+        max-width: 80%;
+    }
+    .contact td {
+        padding: px;
+    }
+}
