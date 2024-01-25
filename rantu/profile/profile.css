@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=DM+Serif+Display&family=Poppins&display=swap');
 *{
-    padding: 0;
     margin: 0;
+    padding: 0; 
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'DM Serif Display', serif;
     font-family: 'Poppins', sans-serif;
 }
 body{
@@ -22,7 +25,7 @@ body{
     width: 70%;
     height: 700px;
     margin-top: 50px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color:white;
     border-radius: 15px;
     display: flex;
     flex-direction: column;

@@ -1,1 +1,0 @@
-GET https://mockserver-aq5n.onrender.com/passbook?_sort=transaction&_order=desc

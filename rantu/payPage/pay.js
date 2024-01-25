@@ -87,7 +87,7 @@ async function passbookUpdate(id){
             "date": properDate,
             "time": properTime,
             "recipient": contactDetails.name,
-            "from": "Self"
+            "from": `${userData.firstName} ${userData.lastName}`,
         });
 
         let obj={
