@@ -216,8 +216,8 @@
     color : white;
 }
 .profile{
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -226,6 +226,11 @@
 .profile>i{
     font-size: 50px;
     color: #1352e4;
+}
+.profile>img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
 }
 .profile:hover{
     cursor: pointer;

@@ -16,6 +16,10 @@ let closeButton = document.getElementById("close-button");
 let detailsWrapper= document.getElementById("detail-wrapper")
 //submit form button
 let submitFormButton = document.getElementById("submit-form-button");
+//toast
+let toast = document.querySelector(".toast");
+let toastText = document.querySelector(".toast-text");
+let toastClose = document.querySelector(".toast-close");
 
 let accountNumberInput = document.getElementById("accountNumber");
 let confirmAccountNumberInput = document.getElementById("confirmAccountNumber");
@@ -127,7 +131,9 @@ submitFormButton.addEventListener("click",async function(e){
         console.log(userDetails,bankDetails);
         addUser();
         toastIntoAction("Sign Up Successful!", "success");
-        window.location.href=`../rantu/index.html`
+        setTimeout(()=>{
+            window.location.href=`../rantu/index.html`
+        },1000)
     }
 })
 
@@ -141,11 +147,12 @@ async function addUser(){
             password:userDetails?.password,
             email:userDetails?.email,
             phone:userDetails?.phone,
+            userImage:userDetails?.userImage,
             bankDetails:{
                 passbookId:userDetails?.bankDetails.passbookId,
                 bankName:bankDetails?.name,
                 image:bankDetails?.image,
-                cardNumber:"",
+                cardNumber:[],
                 accountNumber:confirmAccountNumberInput.value,
                 ifscCode:ifscInput.value,
                 branch:branchInput.value
@@ -193,10 +200,15 @@ function checkInputData(){
         toastIntoAction("All fields are required. Please fill in all the fields!", "alert");
         return;
     }
+    if(obj.accountNumber.length<12 || obj.confirmAccountNumber.length<12){
+        toastIntoAction("Account number must be 12 digits!", "alert")
+        return;
+    }
     if(obj.accountNumber!==obj.confirmAccountNumber){
         toastIntoAction("Acount number doesn't match!", "alert");
         return;
     }
+    
     return true;
 }
 

@@ -15,7 +15,10 @@
                 <input id="firstname-signup" type="text" placeholder="First Name" required>
                 <input id="lastname-signup" type="text" placeholder="Last Name" required>
                 <input id="email-signup" type="email" placeholder="Email" required>
-                <input id="phone-signup" type="number" placeholder="Phone" required>
+                <input id="phone-signup" 
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                type = "number"
+                maxlength = "10" placeholder="Phone" required>
                 <input id="password-signup" type="password" placeholder="Password" required>
                 <input id="confirm-password" type="password" placeholder="Confirm Password" required>
             <button type="submit" class="btnsign" id="signup-btn">

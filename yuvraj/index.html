@@ -60,8 +60,13 @@
                 </svg>
             </div>
             <form>
-                <input id="accountNumber" placeholder="Enter account number" type="number"/>
-                <input id="confirmAccountNumber" type= "number"  placeholder="Re-Enter account number"/>
+                <input id="accountNumber" placeholder="Enter account number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                type = "number"
+                maxlength = "12" />
+                <input id="confirmAccountNumber" 
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                type = "number"
+                maxlength = "12"  placeholder="Re-Enter account number"/>
                 <input id="ifsc"  placeholder="IFSC code" type="text"/>
                 <input id="branch" type= "text"  placeholder="Branch"/><br><br>
                 <a id="submit-form-button" href="#">Submit</a>
