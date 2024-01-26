@@ -126,7 +126,7 @@ submitFormButton.addEventListener("click",async function(e){
         bankDetails=JSON.parse(localStorage.getItem("bank"));
         console.log(userDetails,bankDetails);
         addUser();
-        alert("Sign Up Successful!")
+        toastIntoAction("Sign Up Successful!", "success");
         window.location.href=`../rantu/index.html`
     }
 })
@@ -190,11 +190,11 @@ function checkInputData(){
         confirmAccountNumber:confirmAccountNumberInput.value,
     }
     if(!accountNumberInput.value||!confirmAccountNumberInput.value||!ifscInput.value||!branchInput.value){
-        alert("All fields are required. Please fill in all the fields!")
+        toastIntoAction("All fields are required. Please fill in all the fields!", "alert");
         return;
     }
     if(obj.accountNumber!==obj.confirmAccountNumber){
-        alert("Acount number doesn't match!");
+        toastIntoAction("Acount number doesn't match!", "alert");
         return;
     }
     return true;
@@ -214,3 +214,18 @@ function checkInputData(){
 // }
 
 // deleteUser()
+
+
+//Toast
+function toastIntoAction(params, type){
+    toastText.innerText = params;
+   //  toast.classList.remove("hidden");
+   toast.className = "";
+    toast.classList.add(`${type}`, "toast");
+    toastClose.addEventListener("click", ()=>{
+        toast.classList.add("hiddentoast");
+    })
+     setTimeout(()=>{
+         toast.classList.add("hiddentoast");
+     },4000)
+   }

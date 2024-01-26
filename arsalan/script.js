@@ -13,6 +13,7 @@ let toastClose = document.querySelector(".toast-close");
 
 
 
+
 //Signup
 let signupFirstNameInput = document.getElementById("firstname-signup");
 let signupLastNameInput = document.getElementById("lastname-signup");
@@ -160,6 +161,10 @@ signupBtn.addEventListener("click", (e) => {
     toastIntoAction("Passwords do not match. Please try again.", "alert");
     return;
   }
+  if(!validatePassword(signupPasswordInput.value)){
+    toastIntoAction("Password should contain 1 special character one number and one uppercase letter and atleast 8 characters", "alert");
+    return;
+  }
   if (checkExistingUsers(userData)) {
     toastIntoAction(
       "Account Already Exists with this Email or Phone Number. Please SignIn!", "alert"
@@ -199,3 +204,18 @@ toast.className = "";
       toast.classList.add("hiddentoast");
   },4000)
 }
+
+function validatePassword(password) {
+  // Password validation criteria
+  const hasUpperCase = /[A-Z]/.test(password);
+  const hasLowerCase = /[a-z]/.test(password);
+  const hasNumber = /\d/.test(password);
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+  const isLongEnough = password.length >= 8;
+
+  // Check all criteria are met
+  return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && isLongEnough;
+}
+
+
+
