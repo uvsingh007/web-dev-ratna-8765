@@ -17,46 +17,75 @@ body{
     height: 100px;
     border-radius: 50%;
 }
-.img>img{
+
+.img>img, .bankLogo>img{
     width: 100px;
     border-radius: 50%;
 }
 .profile_r{
     width: 70%;
-    height: 700px;
     margin-top: 50px;
     background-color:white;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
+    padding: 20px;
 }
-.user-details{
-    width: 80%;
-    height: 130px;
+.user-details, .bankDetails{
+    width: 90%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 20px 70px 20px 70px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     line-height: 25px;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 15px;
+    gap: 20px;
 }
-.docs>h2{
+.bankDetails{
+    margin-top: 30px;
+}
+.docs, .bankNotes{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.docs>h2, #bankName{
     color: #0071bc;
-    margin-left: -2px;
+}
+#rewardsIcon{
+    color: goldenrod;
+    margin-right: 10px;
+}
+#totalRewards{
+    color: green; 
+    font-weight: 600; 
 }
 .allDetails{
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-    width: 80%;
+    width: 90%;
     height: auto;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 15px;
     box-sizing: border-box;
     padding: 20px 70px 20px 70px;
 }
+.paymentMethods{
+    padding : 5px;
+}
+#cardTypes{
+    text-decoration: none;
+    color: black;
+}
+/* #cardTypes:hover{
+    cursor: pointer;
+    color: #0071bc;
+} */
 .pay{
     color: #0071bc;
     font-size: large;
@@ -66,6 +95,9 @@ body{
     display: flex;
     gap: 15px;
     margin: 10px 0;
+}
+.ico{
+    padding-top: 3px;
 }
 .addPayMethods{
     width: 250px;
@@ -84,11 +116,17 @@ body{
 }
 #other{
     margin: 10px 0;
+    
 }
 .others{
+    padding: 5px;
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+#invite{
+    text-decoration: none;
+    color: black;
 }
 .gap{
     margin-right: 10px;
@@ -124,7 +162,7 @@ body{
 
 
 @media only screen and (max-width: 600px) {
-    .profile_r, .user-details, .allDetails, .card, .addPayMethods {
+    .profile_r, .user-details, .allDetails, .card, .addPayMethods, .bankDetails {
         width: 90%;
         max-width: 100%;
     }
@@ -132,7 +170,7 @@ body{
         height: auto;
         flex-direction: column;
     }
-    .user-details{
+    .user-details, .bankDetails{
         height: auto;
         flex-direction: column;
         padding: 10px;

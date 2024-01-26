@@ -9,6 +9,14 @@ let totalBalance = document.querySelector(".total-balance-amount");
 let passbookData;
 let userData = JSON.parse(localStorage.getItem("user"));
 
+let cardCount = document.querySelector("#cardCount");
+
+let bankLogo = document.querySelector("#bankLogo");
+let bankName = document.querySelector("#bankName");
+let accountNumber = document.querySelector("#accountNumber");
+let branchName = document.querySelector("#branchName");
+let ifsc = document.querySelector("#ifsc");
+
 async function fetchData(id) {
     try {
         let res = await fetch(`${passbookUrl}/${id}`);
