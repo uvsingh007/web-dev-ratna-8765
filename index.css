@@ -285,7 +285,6 @@
         }
         .foot_one {
             flex-direction: column;
-            /* gap: 35px; */
         }
         .about {
             max-width: 80%;
