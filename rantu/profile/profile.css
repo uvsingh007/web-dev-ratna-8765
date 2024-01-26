@@ -11,47 +11,64 @@ body{
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, hsla(253, 87%, 50%, 1) 9%, hsla(197, 100%, 60%, 1) 82%);
+    padding: 30px;
 }
 .img{
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+    flex-shrink: 0;
+}
+.bankLogo{
+    width: 150px;
 }
 
+
 .img>img, .bankLogo>img{
-    width: 100px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
+    
 }
 .profile_r{
-    width: 70%;
-    margin-top: 50px;
+    width: 55%;
+    margin-top: 30px;
     background-color:white;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
 }
-.user-details, .bankDetails{
+.user-details{
     width: 90%;
     height: auto;
     box-sizing: border-box;
-    padding: 20px 70px 20px 70px;
+    /* padding: 10px 70px; */
     display: flex;
-    justify-content: space-between;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
     align-items: center;
-    line-height: 25px;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 15px;
     gap: 20px;
 }
-.bankDetails{
-    margin-top: 30px;
+.bankAndPayments{
+    width: 90%;
+    height: auto;
+    box-sizing: border-box;
+    /* padding: 10px 70px; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    gap: 20px;
 }
-.docs, .bankNotes{
+
+.docs{
     display: flex;
     flex-direction: column;
-    gap: 5px;
 }
 .docs>h2, #bankName{
     color: #0071bc;
@@ -67,7 +84,6 @@ body{
 .allDetails{
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
     width: 90%;
     height: auto;
     background-color: rgba(255, 255, 255, 0.6);
@@ -77,6 +93,7 @@ body{
 }
 .paymentMethods{
     padding : 5px;
+    margin-top: 23px;
 }
 #cardTypes{
     text-decoration: none;
@@ -162,6 +179,9 @@ body{
 
 
 @media all and (max-width: 768px) {
+    .profile_r{
+        padding: 10px;
+    }
     .profile_r, .user-details, .allDetails, .card, .addPayMethods, .bankDetails {
         width: 90%;
         max-width: 100%;
@@ -172,7 +192,7 @@ body{
     }
     .user-details, .bankDetails{
         height: auto;
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 10px;
     }
     .allDetails{
@@ -182,4 +202,28 @@ body{
     .addPayMethods{
         width: 100%;
     }
+    /* .bankAndPayments{
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+    } */
+    .bankNotes{
+        padding: 10px;
+        
+    }
+    .img{
+        margin : auto;
+    }
+}
+
+@media (max-width: 481px) {
+    .bankAndPayments{
+        /* flex-direction: column; */
+        display: unset;
+        padding: 10px;
+        
+        /* justify-content: center; */
+    }
+
 }
