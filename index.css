@@ -8,6 +8,9 @@
     body {
         font-family: "Poppins", sans-serif;
         background: linear-gradient(135deg, hsla(253, 87%, 50%, 1) 9%, hsla(197, 100%, 60%, 1) 82%);
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+        overscroll-behavior-y: contain;
     }
     
     a {
@@ -292,7 +295,6 @@
     @media (max-width: 480px) {
         .container {
             grid-template-columns: 1fr;
-            
             /* width: 100%; */
         }
         /* .card-container {
@@ -339,24 +341,22 @@
             flex-direction: column-reverse;
             gap: 10px;
         }
-        .next_section{
+        .next_section {
             padding: 20px;
         }
         .word>p>span {
             color: rgb(7, 1, 128);
         }
-        
         .word .digital {
             color: antiquewhite;
         }
-        
         .word>p {
             color: black;
             font-weight: 600;
             text-align: center;
             font-size: 40px;
         }
-        .one_more{
+        .one_more {
             padding: 20px;
         }
     }
