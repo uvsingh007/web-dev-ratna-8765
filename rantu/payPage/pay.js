@@ -30,7 +30,7 @@ function totalBalanceDynamic(item){
 }
 
 function userCardDynamic(item){
-    userName.innerText = `${item.name}`;
+    userName.innerText = `${item.name? item.name: `${contactDetails.firstName} ${contactDetails.lastName}`}`;
 }
 userCardDynamic(contactDetails);
 
@@ -45,9 +45,12 @@ paybtn.addEventListener("click",async function(e){
         return;
     }
     passbookUpdate(userData.id);
+    if(contactDetails.hasOwnProperty("id")){
+        updatePassBookReciever(contactDetails.id);
+    }
     setTimeout(()=>{
         window.location.href=`../../paymentpage/paymntdone.html`
-    },1000)
+    },2000)
 })
 
 function checkBalance(){
@@ -86,7 +89,7 @@ async function passbookUpdate(id){
             "type": "debit",
             "date": properDate,
             "time": properTime,
-            "recipient": contactDetails.name,
+            "recipient": `${contactDetails.name? contactDetails.name: `${contactDetails.firstName} ${contactDetails.lastName}`}`,
             "from": `${userData.firstName} ${userData.lastName}`,
         });
 
@@ -103,6 +106,49 @@ async function passbookUpdate(id){
         })
         let data= await res.json();
         console.log(data);
+    }
+    catch(error){
+        console.log(error);
+    }
+}
+
+async function updatePassBookReciever(id){
+    try{
+        let currentTime = new Date();
+        let currentOffset =currentTime.getTimezoneOffset();
+        let ISTOffset = 330;
+        let ISTTime = new Date(currentTime.getTime() + (ISTOffset + currentOffset)*60000);
+        let hoursIST = ISTTime.getHours()
+        let minutesIST = ISTTime.getMinutes()
+        let properDate =Intl.DateTimeFormat('en-GB').format(ISTTime);
+        let properTime = `${hoursIST}:${minutesIST}`
+        let resPassbook = await fetch(`${passbookUrl}/${id}`)
+        let passbookData= await resPassbook.json();
+        console.log(passbookData);
+        passbookData.transactions.push({
+            "amount": amount.value,
+            "title": "Recieved",
+            "type": "credit",
+            "date": properDate,
+            "time": properTime,
+            "recipient": `${contactDetails.name? contactDetails.name: `${contactDetails.firstName} ${contactDetails.lastName}`}`,
+            "from": `${userData.firstName} ${userData.lastName}`,
+        });
+        let obj ={
+            id: passbookData.id,
+            amount: Number(passbookData.amount)+Number(amount.value),
+            transactions: passbookData.transactions
+        }
+        let res = await fetch(`${passbookUrl}/${id}`,{
+            method:"PATCH",
+            headers:{
+                "Content-Type":"application/json",
+            },
+            body:JSON.stringify(obj)
+        })
+        let data= await res.json();
+        console.log(data);
+
     }
     catch(error){
         console.log(error);
