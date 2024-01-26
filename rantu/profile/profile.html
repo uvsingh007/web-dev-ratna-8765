@@ -14,33 +14,56 @@
     <div class="profile_r">
         <h2 style="font-weight: bolder; margin-bottom: 20px; color: #0a41c4">Profile</h2>
 
+        <hr>
+
         <div class="user-details">
             <div class="docs">
-               <h2 id="profName"></h2>
-               <p id="email"></p>
-               <p><span style="color: goldenrod;margin-right: 10px;"><i class="fa-solid fa-sack-dollar"></i></span>Total Rewards</p>
-               <p style="color: green; font-weight: 600; margin-left: 20px;">$39.00</p>
-            </div>
+                <h2 id="profName"></h2>
+                <p id="mobileNum"></p>
+                <p id="email"></p>
+                <p><i id="rewardsIcon" class="fa-solid fa-sack-dollar"></i>Total Rewards</p>
+                <p id="totalRewards">$39.00</p>
+             </div>
+
+
             <div class="img">
-                <img src="https://i.pinimg.com/736x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg" alt="User">
+                <img id="userImg" alt="User">
             </div>
         </div>
+
+        <hr>
+
+        <div class="bankDetails">
+            <div class="bankNotes">
+                <div class="bankLogo">
+                    <img id="bankLogo" alt="Bank">
+                </div>
+                <h2 id="bankName"></h2>
+                <p id="accountNumber"></p>
+                <p id="accountType"></p>
+                <p id="branchName"></p>
+                <p id="ifsc"></p>
+             </div>
+        </div>
+
+        <hr>
+
         <div class="allDetails">
             <div class="paymentMethods">
                 <p class="pay">Payment Methods</p>
                 <div class="cards">
                     <div class="card">
-                        <i class="fa-solid fa-building-columns"></i>
+                        <i class="fa-solid fa-building-columns ico"></i>
                         <div class="methodDetail">
                             <p>Bank Accounts</p>
-                            <p>2 accounts</p>
+                            <p>1 account</p>
                         </div>
                     </div>
                     <div class="card">
-                        <i class="fa-solid fa-credit-card"></i>
+                        <i class="fa-solid fa-credit-card ico"></i>
                         <div class="methodDetail">
-                            <p>Debit/Credit Cards</p>
-                            <p>2 cards</p>
+                            <a id="cardTypes" href="#">Debit/Credit Cards</a>
+                            <p id="cardCount"></p>
                         </div>
                     </div>
                 </div>
@@ -57,7 +80,7 @@
             <div class="others">
                 <h4 class="pay" id="other">Others</h4>
                 <p><span><i class="fa-solid fa-heart gap"></i></span>Favourite</p>
-                <p><span><i class="fa-solid fa-share-nodes gap"></i></span>Invite Friends</p>
+                <p><span><i class="fa-solid fa-share-nodes gap"></i></span><a href="../../akash/invite.html" id="invite">Invite Friends</a></p>
                 <p><span><i class="fa-solid fa-gear gap"></i></span>Settings</p>
                 <p>24x7 Help & Support</p>
             </div>
