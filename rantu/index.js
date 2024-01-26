@@ -48,7 +48,7 @@ function singleCard(item) {
     if(item.type === "debit"){
         status.innerText = `${item.title} to ${item.recipient}`;
     }else{
-        status.innerText = `${item.title}`;
+        status.innerText = `${item.title} from ${item.from}`;
     }
     customerStatus.append(name, status)
 

@@ -25,10 +25,10 @@ let accountNumberInput = document.getElementById("accountNumber");
 let confirmAccountNumberInput = document.getElementById("confirmAccountNumber");
 let ifscInput = document.getElementById("ifsc");
 let branchInput = document.getElementById("branch");
-let accountNumberError =document.getElementById("account-number-error");
-let confirmAccountNumberError=document.getElementById("confirm-account-number-error");
-let ifscError=document.getElementById("ifsc-error");
-let branchError= document.getElementById("branch-error");
+// let accountNumberError =document.getElementById("account-number-error");
+// let confirmAccountNumberError=document.getElementById("confirm-account-number-error");
+// let ifscError=document.getElementById("ifsc-error");
+// let branchError= document.getElementById("branch-error");
 
 let userDetails;
 let bankDetails;
