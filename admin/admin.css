@@ -20,6 +20,10 @@ body{
     position: relative;
     width: 100%;
 }
+.container img{
+    width: 250px;
+    cursor: pointer;
+}
 .navigation{
     position: fixed;
     width: 300px;
@@ -48,6 +52,7 @@ left: 0;
 
 .navigation ul li:hover{
     background: #fff;
+    
 }
 
 .navigation ul li a{
@@ -57,6 +62,9 @@ left: 0;
     display: flex;
     text-decoration: none;
     color: #fff;
+}
+.navigation ul li a:hover{
+    color: #0a41c4;
 }
 .navigation ul li a i{
     position: relative;
