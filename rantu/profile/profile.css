@@ -127,9 +127,10 @@ body{
     margin-bottom: 20px;
     transition-duration: .5s ease-in-out;
 }
-.addPayMethods>p{
+.addPayMethods>a{
     color: #0071bc;
     font-weight: 600;
+    text-decoration: none;
 }
 #other{
     margin: 10px 0;
