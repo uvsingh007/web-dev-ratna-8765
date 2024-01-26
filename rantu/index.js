@@ -1,12 +1,14 @@
 let baseUrl = `https://mockserver-aq5n.onrender.com`;
 let passbookUrl = `${baseUrl}/passbook`;
 let userUrl = `${baseUrl}/users`;
-
+let profilePicture = document.getElementById("profile-picture")
 let passbookArray = document.querySelector(".transactions-wrapper");
 let userName = document.querySelector("#user-name");
 let totalBalance = document.querySelector(".total-balance-amount");
 let passbookData;
 let userData = JSON.parse(localStorage.getItem("user"));
+
+
 function appendToDOM(customers) {
     passbookArray.innerHTML = "";
     // let h3 = document.createElement("h3");
@@ -48,10 +50,7 @@ function singleCard(item) {
     }else{
         status.innerText = `${item.title}`;
     }
-    
-
     customerStatus.append(name, status)
-
 
     let ammountBox = document.createElement("div");
     ammountBox.classList.add("amount", "common");
@@ -87,7 +86,9 @@ async function fetchData(id) {
             appendToDOM(passbookData.transactions);
         }
         // appendToDOM(passbookData.transactions);
+        // profilePictureChange(userData)
         totalBalanceDynamic(passbookData);
+
         console.log(data);
     } catch (error) {
         console.log(error);
@@ -109,3 +110,8 @@ function totalBalanceDynamic(item){
     console.log(item)
     totalBalance.innerText = `$${item.amount}.00`;
 }
+
+function profilePictureChange(userData){
+    console.log(userData.userImage);
+    profilePicture.src=`${userData.userImage}`
+};

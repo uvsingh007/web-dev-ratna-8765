@@ -7,6 +7,12 @@ let baseUrl = `https://mockserver-aq5n.onrender.com`;
 let userUrl = `${baseUrl}/users`;
 let siginBtn = document.getElementById("loginbtnSign");
 let userData;
+let toast = document.querySelector(".toast");
+let toastText = document.querySelector(".toast-text");
+let toastClose = document.querySelector(".toast-close");
+
+
+
 
 //Signup
 let signupFirstNameInput = document.getElementById("firstname-signup");
@@ -62,10 +68,13 @@ siginBtn.addEventListener("click", (e) => {
   e.preventDefault();
   console.log("hi");
   if (checkUsers(userData)) {
-    alert("Login Successful");
-    window.location.href = "../rantu/index.html";
+    toastIntoAction("Login Successful", "success");
+    setTimeout(() => {
+      window.location.href = "../rantu/index.html";
+    },1200)
+   
   } else {
-    alert("Invalid Credentials");
+    toastIntoAction("Invalid Credentials", "alert");
   }
 });
 
@@ -145,16 +154,24 @@ signupBtn.addEventListener("click", (e) => {
     !signupPasswordInput.value ||
     !signupConfirmPasswordInput.value
   ) {
-    alert("All fields are required. Please fill in all the fields.");
+    toastIntoAction("All fields are required. Please fill in all the fields.", "alert");
     return; // Prevent further execution
   }
+  if(signupPhoneInput.value.length<10){
+    toastIntoAction("Phone number must be a 10 digit number!","alert");
+    return;
+  }
   if (signupPasswordInput.value !== signupConfirmPasswordInput.value) {
-    alert("Passwords do not match. Please try again.");
+    toastIntoAction("Passwords do not match. Please try again.", "alert");
+    return;
+  }
+  if(!validatePassword(signupPasswordInput.value)){
+    toastIntoAction("Password should contain 1 special character one number and one uppercase letter and atleast 8 characters", "alert");
     return;
   }
   if (checkExistingUsers(userData)) {
-    alert(
-      "Account Already Exists with this Email or Phone Number. Please SignIn!"
+    toastIntoAction(
+      "Account Already Exists with this Email or Phone Number. Please SignIn!", "alert"
     );
   } else {
     let obj = {
@@ -164,11 +181,12 @@ signupBtn.addEventListener("click", (e) => {
       email: signupEmailInput.value,
       phone: signupPhoneInput.value,
       password: signupConfirmPasswordInput.value,
+      userImage:"../assets/user/user.jpg",
       bankDetails: {
         passbookId: userData.length + 1,
         bankName: "",
         image: "",
-        cardNumber: "",
+        cards:[],
         accountNumber: "",
         ifscCode: "",
         branch: "",
@@ -178,3 +196,31 @@ signupBtn.addEventListener("click", (e) => {
     window.location.href = "../yuvraj/index.html";
   }
 });
+
+function toastIntoAction(params, type){
+ toastText.innerText = params;
+//  toast.classList.remove("hidden");
+toast.className = "";
+ toast.classList.add(`${type}`, "toast");
+ toastClose.addEventListener("click", ()=>{
+     toast.classList.add("hiddentoast");
+ })
+  setTimeout(()=>{
+      toast.classList.add("hiddentoast");
+  },4000)
+}
+
+function validatePassword(password) {
+  // Password validation criteria
+  const hasUpperCase = /[A-Z]/.test(password);
+  const hasLowerCase = /[a-z]/.test(password);
+  const hasNumber = /\d/.test(password);
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+  const isLongEnough = password.length >= 8;
+
+  // Check all criteria are met
+  return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && isLongEnough;
+}
+
+
+

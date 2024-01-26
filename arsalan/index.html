@@ -15,7 +15,10 @@
                 <input id="firstname-signup" type="text" placeholder="First Name" required>
                 <input id="lastname-signup" type="text" placeholder="Last Name" required>
                 <input id="email-signup" type="email" placeholder="Email" required>
-                <input id="phone-signup" type="number" placeholder="Phone" required>
+                <input id="phone-signup" 
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                type = "number"
+                maxlength = "10" placeholder="Phone" required>
                 <input id="password-signup" type="password" placeholder="Password" required>
                 <input id="confirm-password" type="password" placeholder="Confirm Password" required>
             <button type="submit" class="btnsign" id="signup-btn">
@@ -30,7 +33,6 @@
                 <h1>Sign In</h1>
                 <input id="logindata" type="email" placeholder="Email/Phone">
                 <input id ="loginpassword" type="password" placeholder="Password">
-                <a href="#">Forget Your Password?</a>
                 <a class="btnsign" id="loginbtnSign" href="../rantu/index.html">Sign In</a>
             
             </form>
@@ -48,6 +50,12 @@
                     <button class="hidden btnsign" id="register">Sign Up</button>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="toast success hiddentoast">
+        <div class="toast-message">
+            <span class="toast-text"></span>
+            <button class="toast-close">X</button>
         </div>
     </div>
 </body>
