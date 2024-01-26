@@ -161,7 +161,7 @@ body{
 }
 
 
-@media only screen and (max-width: 600px) {
+@media all and (max-width: 768px) {
     .profile_r, .user-details, .allDetails, .card, .addPayMethods, .bankDetails {
         width: 90%;
         max-width: 100%;

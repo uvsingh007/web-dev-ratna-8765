@@ -86,7 +86,7 @@ async function fetchData(id) {
             appendToDOM(passbookData.transactions);
         }
         // appendToDOM(passbookData.transactions);
-        // profilePictureChange(userData)
+        profilePictureChange(userData)
         totalBalanceDynamic(passbookData);
 
         console.log(data);
