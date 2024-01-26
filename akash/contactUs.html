@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <title> Contact Us</title>
     <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./contact.css">
 </head>
 
@@ -61,24 +62,26 @@
                 </div>
 
                 <div class="contact-form">
-                    <form action="" id="contact-form">
+                    <form id="contact-form">
                         <h2>Send Message</h2>
                         <div class="input-box">
-                            <input id="input_one" placeholder="Full Name" type="text" required="true" name="">
+                            <input id="input_one_fullname" placeholder="Full Name" type="text" required="true" name="">
                         </div>
 
 
                         <div class="input-box">
-                            <input id="input_one" placeholder="Email" type="email" required="true" name="">
+                            <input id="input_one_email" placeholder="Email" type="email" required="true" name="">
                         </div>
 
                         <div class="input-box">
-                            <textarea id="input_one" placeholder="Type your Message..." required="true" name=""></textarea>
+                            <textarea id="input_one_message" placeholder="Type your Message..." required="true" name=""></textarea>
                         </div>
 
-                        <div class="input-box" id="send">
-                            <input type="submit" value="Send" name="">
+                        <div class="input-box">
+                            <input id="send" type="submit" value="Send" name="">
+
                         </div>
+
                     </form>
                 </div>
 
@@ -156,18 +159,46 @@
             </div>
         </div>
     </footer>
-
+    <div class="toast success hiddentoast">
+        <div class="toast-message">
+            <span class="toast-text"></span>
+            <button class="toast-close">X</button>
+        </div>
+    </div>
 </body>
 <script>
-    let input1 = document.getElementById("")
-    let input2 = document.getElementById("")
-    let input3 = document.getElementById("")
-    let send = document.getElementById("send");
-    send.addEventListener("click", () => {
+    let toast = document.querySelector(".toast");
+    let toastText = document.querySelector(".toast-text");
+    let toastClose = document.querySelector(".toast-close");
 
-        input_one.innerHtml = "";
-        alert("Thank You For Contacting Us We Will reach Out To You")
-    })
+
+
+    function toastIntoAction(params, type) {
+        toastText.innerText = params;
+        toast.className = "";
+        toast.classList.add(`${type}`, "toast");
+        toastClose.addEventListener("click", () => {
+            toast.classList.add("hiddentoast");
+        })
+        setTimeout(() => {
+            toast.classList.add("hiddentoast");
+        }, 4000)
+    }
+
+
+
+    let btn = document.getElementById("send");
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        toastIntoAction("Thank You For Contacting Us. We Will Reach Out To You", 'success');
+        let fullName = document.getElementById("input_one_fullname");
+        let email = document.getElementById("input_one_email");
+        let message = document.getElementById("input_one_message");
+        fullName.value = "";
+        email.value = "";
+        message.value = "";
+
+    });
 </script>
 
 </html>
