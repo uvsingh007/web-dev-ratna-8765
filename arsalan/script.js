@@ -157,6 +157,10 @@ signupBtn.addEventListener("click", (e) => {
     toastIntoAction("All fields are required. Please fill in all the fields.", "alert");
     return; // Prevent further execution
   }
+  if(signupPhoneInput.value.length<10){
+    toastIntoAction("Phone number must be a 10 digit number!","alert");
+    return;
+  }
   if (signupPasswordInput.value !== signupConfirmPasswordInput.value) {
     toastIntoAction("Passwords do not match. Please try again.", "alert");
     return;
@@ -177,11 +181,12 @@ signupBtn.addEventListener("click", (e) => {
       email: signupEmailInput.value,
       phone: signupPhoneInput.value,
       password: signupConfirmPasswordInput.value,
+      userImage:"../assets/user/user.jpg",
       bankDetails: {
         passbookId: userData.length + 1,
         bankName: "",
         image: "",
-        cardNumber: "",
+        cards:[],
         accountNumber: "",
         ifscCode: "",
         branch: "",
