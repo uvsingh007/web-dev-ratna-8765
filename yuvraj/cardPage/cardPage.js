@@ -1,6 +1,12 @@
 let container = document.querySelector(".container")
 let userData = JSON.parse(localStorage.getItem("user"));
 
+function appendHeading(){
+    let heading = document.createElement("h1");
+    heading.innerText="No Cards Available"
+    container.append(heading)
+}
+
 function createCard(item){
     let cardContainer =  document.createElement("div");
     cardContainer.className="card-container";
