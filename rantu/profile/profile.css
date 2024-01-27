@@ -31,7 +31,7 @@ body{
     
 }
 .profile_r{
-    width: 60%;
+    width: 50%;
     margin-top: 30px;
     background-color:white;
     border-radius: 15px;
@@ -46,7 +46,6 @@ body{
     box-sizing: border-box;
     /* padding: 10px 70px; */
     display: flex;
-    flex-direction: row-reverse;
     justify-content: space-evenly;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.6);
@@ -117,7 +116,6 @@ body{
     padding-top: 3px;
 }
 .addPayMethods{
-    width: 250px;
     height: 40px;
     border: 1px solid #0071bc;
     border-radius: 8px;
@@ -179,6 +177,10 @@ body{
     background-color: #0884d725;
 }
 
+.bankDetails{
+    padding-left: 20px;
+}
+
 
 @media all and (max-width: 768px) {
     
@@ -195,7 +197,7 @@ body{
     }
     .user-details, .bankDetails{
         height: auto;
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding: 10px;
     }
     .allDetails{

@@ -4,8 +4,10 @@ let userData = JSON.parse(localStorage.getItem("user"));
 function appendHeading(){
     let heading = document.createElement("h1");
     heading.innerText="No Cards Available"
-    container.append(heading)
+    container.append(heading);
+    appendAddMore()
 }
+appendHeading()
 
 function createCard(item){
     let cardContainer =  document.createElement("div");
@@ -69,21 +71,28 @@ function createCard(item){
     return cardContainer;
 }
 
+function appendAddMore(){
+    let btnDiv = document.createElement("div");
+    btnDiv.className="btn";
+
+    let btn =document.createElement("button");
+    btn.className="btn";
+    btn.innerText="Add more cards";
+    btn.addEventListener("click",()=>{
+        window.location.href="../../akash/card.html"
+    })
+    btnDiv.append(btn);
+    container.append(btnDiv);
+}
 // function to append created card into our DOM
 function appendData(data){
     container.innerHTML=""
     data.forEach((item)=>{
         container.append(createCard(item));
     })
-    let btnDiv = document.createElement("div");
-    btnDiv.className="btn";
-
-    let btn =document.createElement("button");
-    btn.className="btn";
-    btn.innerText="Add more cards"
-
-    btnDiv.append(btn);
-    container.append(btnDiv);
+    appendAddMore()
 }
 
-appendData(userData.bankDetails.cards);
+if(userData.cards.length>0){
+    appendData(userData.cards)
+}
