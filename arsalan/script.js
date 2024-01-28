@@ -157,7 +157,7 @@ signupBtn.addEventListener("click", (e) => {
     toastIntoAction("All fields are required. Please fill in all the fields.", "alert");
     return; // Prevent further execution
   }
-  if(signupPhoneInput.value.length<10){
+  if(signupPhoneInput.value?.length<10){
     toastIntoAction("Phone number must be a 10 digit number!","alert");
     return;
   }
