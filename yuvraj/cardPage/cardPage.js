@@ -16,6 +16,10 @@ function createCard(item){
     let front = document.createElement("div");
     front.className="front";
 
+    front.addEventListener("click",()=>{
+        localStorage.setItem("card",JSON.stringify(item));
+    })
+
     let imageContainer = document.createElement("div");
     imageContainer.className="image";
     
@@ -93,6 +97,6 @@ function appendData(data){
     appendAddMore()
 }
 
-if(userData.cards.length>0){
-    appendData(userData.cards)
+if(userData.bankDetails.cards.length>0){
+    appendData(userData.bankDetails.cards)
 }
