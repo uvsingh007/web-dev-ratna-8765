@@ -236,8 +236,7 @@ input::-webkit-inner-spin-button {
         flex-wrap: wrap;
     }
     .container .card-container .front {
-        display: none;
-        position: relative;
-        width: 100%;
+        /* display: none; */
+        
     }
 }
