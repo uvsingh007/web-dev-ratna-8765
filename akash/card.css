@@ -227,3 +227,16 @@ input::-webkit-inner-spin-button {
         /* top: 10%; */
     }
 }
+
+@media (max-width: 720px) {
+    form {
+        max-width: 100%;
+    }
+    .flexbox {
+        flex-wrap: wrap;
+    }
+    .container .card-container .front {
+        /* display: none; */
+        
+    }
+}
