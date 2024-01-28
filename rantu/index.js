@@ -7,6 +7,7 @@ let userName = document.querySelector("#user-name");
 let totalBalance = document.querySelector(".total-balance-amount");
 let passbookData;
 let userData = JSON.parse(localStorage.getItem("user"));
+let addToWallet = document.getElementById("wallet");
 
 
 function appendToDOM(customers) {
@@ -115,3 +116,7 @@ function profilePictureChange(userData){
     console.log(userData.userImage);
     profilePicture.src=`${userData.userImage}`
 };
+
+addToWallet.addEventListener("click", ()=>{
+    localStorage.setItem("wallet", JSON.stringify(true));
+})

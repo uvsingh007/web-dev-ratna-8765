@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=DM+Serif+Display&family=Poppins&display=swap');
+
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -35,6 +37,7 @@ h1{
     height: 250px;
     width: 400px;
     cursor: pointer;
+    margin-top: 50px;
 }
 
 .container .card-container .front{
@@ -89,7 +92,7 @@ h1{
 
 .btn{
     /* display: flex; */
-    margin-top:-200px;
+    /* margin-top:-200px; */
     flex-basis: 100%;
     text-align: center;
 }
@@ -133,4 +136,20 @@ h1{
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+}
+#backbtn{
+    border: none;
+    position: absolute;
+    z-index: 1000;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right:10px ;
+    /* backdrop-filter: blur(5px); */
+}
+.fa-arrow-left{
+    padding: 25px;
+    font-size: 40px;
+    color: white;
+
+
 }

@@ -132,6 +132,7 @@ section {
     z-index: 1;
     overflow: hidden;
     transition: 0.5s;
+    margin-bottom: 20px;
 }
 
 .card:hover {
@@ -331,4 +332,7 @@ footer .foot_one {
     .one_more {
         padding: 20px;
     }
+}
+.main-section{
+    padding: 20px;
 }

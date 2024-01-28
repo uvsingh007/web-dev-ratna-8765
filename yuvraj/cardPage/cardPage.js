@@ -18,6 +18,9 @@ function createCard(item){
 
     front.addEventListener("click",()=>{
         localStorage.setItem("card",JSON.stringify(item));
+        if(JSON.parse(localStorage.getItem("wallet"))){
+            window.location.href="../addToWallet/addToWallet.html"
+        }
     })
 
     let imageContainer = document.createElement("div");
