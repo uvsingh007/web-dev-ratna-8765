@@ -46,8 +46,9 @@ function toastIntoAction(params, type) {
 
 let submit = document.getElementById("submit");
 submit.addEventListener("click", (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    window.scrollTo(0, 0);
     toastIntoAction("Card has been added", 'success');
-
+    
 
 })

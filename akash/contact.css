@@ -331,6 +331,10 @@ footer {
     }
 }
 
+.position-s .sticky-top {
+    width: 100%;
+}
+
 .toast {
     padding: 10px 20px;
     font-weight: 700;
