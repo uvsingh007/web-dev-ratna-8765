@@ -74,7 +74,7 @@ siginBtn.addEventListener("click", (e) => {
     },1200)
    
   } else {
-    toastIntoAction("Invalid Credentials", "alert");
+    toastIntoAction("User doesnot exist or Invalid Credentials", "alert");
   }
 });
 
@@ -181,7 +181,7 @@ signupBtn.addEventListener("click", (e) => {
       email: signupEmailInput.value,
       phone: signupPhoneInput.value,
       password: signupConfirmPasswordInput.value,
-      userImage:"../assets/user/user.jpg",
+      userImage:"../assets/user/user.png",
       bankDetails: {
         passbookId: userData.length + 1,
         bankName: "",

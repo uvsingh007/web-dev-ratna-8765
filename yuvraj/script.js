@@ -150,9 +150,9 @@ async function addUser(){
             userImage:userDetails?.userImage,
             bankDetails:{
                 passbookId:userDetails?.bankDetails.passbookId,
-                bankName:bankDetails?.name,
+                bankName:bankDetails?.title,
                 image:bankDetails?.image,
-                cardNumber:[],
+                cards:[],
                 accountNumber:confirmAccountNumberInput.value,
                 ifscCode:ifscInput.value,
                 branch:branchInput.value

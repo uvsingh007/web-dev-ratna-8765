@@ -15,7 +15,7 @@ function appendToDOM(customers) {
     // h3.id = "transaction";
     // h3.innerText = "Transactions";
     // passbookArray.append(h3);
-    for(let i=customers.length-1; i>=0; i--){
+    for(let i=customers.length-1; i>=customers.length-3 && i>-1; i--){
         let customer1 = singleCard(customers[i]);
         passbookArray.append(customer1)
     }
