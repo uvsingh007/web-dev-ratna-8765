@@ -172,3 +172,8 @@ function toastIntoAction(params, type){
          toast.classList.add("hiddentoast");
      },4000)
    }
+
+   let backbtn = document.getElementById("backbtn");
+   backbtn.addEventListener("click", () => {
+    window.history.back();
+})

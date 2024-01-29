@@ -12,12 +12,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <a><button id="backbtn"><i  id="backbtn" class="fa-solid fa-arrow-left"></i></button>
+    </a>
     <div class="payment">
         <div class="upper">
             <img src="https://i.pinimg.com/736x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg" alt="User">
             <h4 id="name"></h4>
-            <input class="inpt amnt_req" type="number" placeholder="Enter Amount">
+            <input oninput="this.value = this.value.replace(/[^0-9]/g,'');" class="inpt amnt_req" type="number" placeholder="Enter Amount">
             <input class="inpt message-req" type="text" placeholder="Add Message">
         </div>
     

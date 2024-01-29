@@ -56,3 +56,9 @@ function bankDetails(item) {
 bankDetails(userData);
 
 console.log(userData)
+
+let backbtn = document.getElementById("backbtn");
+backbtn.addEventListener("click", () => {
+ window.history.back();
+ localStorage.removeItem("wallet");
+})

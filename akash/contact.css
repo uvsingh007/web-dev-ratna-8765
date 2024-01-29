@@ -318,7 +318,7 @@ footer {
     /* right: 0px;  */
     transform: translatex(-50%);
     left: 50%;
-    z-index: 1000;
+    z-index: 999999;
     animation: fadeInOut 1.2s ease-in-out;
 }
 
@@ -331,7 +331,7 @@ footer {
 }
 
 .hiddentoast {
-    display: none;
+  
 }
 
 .toast-close {
@@ -410,4 +410,19 @@ footer {
     .one_more {
         padding: 20px;
     }
+}
+#backbtn{
+    border: none;
+    position: absolute;
+  
+    background-color: transparent;
+    cursor: pointer;
+    margin-right:10px ;
+    /* backdrop-filter: blur(5px); */
+}
+.fa-arrow-left{
+    padding: 25px;
+    font-size: 40px;
+    color: white;
+    transform: translatey(-290px);
 }
