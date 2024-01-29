@@ -51,7 +51,7 @@ Apex crafts is an online payment portal to make transactions swift and easy.
 
 # Deployed Link
 
-Here is demo link :- https://web-dev-ratna-8765.netlify.app/
+Here is demo link :- https://web-dev-ratna-8765.vercel.app
 
 # Deployed Server Link
 
