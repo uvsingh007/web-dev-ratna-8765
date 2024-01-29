@@ -359,3 +359,8 @@
             padding: 20px;
         }
     }
+
+    .contact a{
+        color: grey;
+        text-decoration: none;
+    }
