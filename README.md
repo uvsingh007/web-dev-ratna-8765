@@ -1,7 +1,7 @@
 
 # Digital Pay
 
-Apex crafts is an online payment portal to make transactions swift and easy.
+Digital Pay is an online payment portal to make transactions swift and easy.
 
 
 ## Features
